@@ -7,6 +7,8 @@ public class JavaHomeWork01 {
 
 
 		// dummy commit
+		
+		//質問１：以下変数nの値は？
 	}
 
 }
