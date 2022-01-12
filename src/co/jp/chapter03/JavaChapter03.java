@@ -78,19 +78,78 @@ public class JavaChapter03 {
 
 		// loop
 
-		for (int i = 0; i < total; i++) {
-			//			System.out.println(i);
-			x = i;
-			y = (total - n * x) / m;
-			if (y % 1 > 0) {
-//				System.out.println(y % 1);
-				continue;
-			}
-			System.out.println("   " + (i + 1) + "回目 ⇒ 鸡: " + x + "只 ---- 兔: " + y + "只 ");
-			if (y <= 0) {
-				break;
-			}
-		}
+		//		for (int i = 0; i < total; i++) {
+		//			//			System.out.println(i);
+		//			x = i;
+		//			y = (total - n * x) / m;
+		//			if (y % 1 > 0) {
+		////				System.out.println(y % 1);
+		//				continue;
+		//			}
+		//			System.out.println("   " + (i + 1) + "回目 ⇒ 鸡: " + x + "只 ---- 兔: " + y + "只 ");
+		//			if (y <= 0) {
+		//				break;
+		//			}
+		//		}
+		//
+
+		//		int i = 0;// dead loop
+
+		//		for (;;) {
+		////			i++;// i = i + 1;
+		//			i = i + 1000000;
+		//			System.out.println(i);
+		//		}
+
+		// 0 ~ 100 所有的偶数
+		//
+		//		for (int o = 0; o <= 100; o++) {
+		//			if (o % 2 == 0) {
+		//				System.out.println(o);
+		//			}
+		//		}
+		//
+
+		//		for (;;) {
+		//			System.out.println(" i : "+  i);
+		//			i = i + 2;
+		//			if (i > 100) {
+		//				break;
+		//			}
+		//		}
+				int i = 0;
+//				while (true) {
+//					if (i % 2 == 0) {
+//						System.out.println(i);
+//					}
+//					i++;
+//					if (i > 100) {
+//						break;
+//					}
+//				}
+
+
+				do {
+
+
+					// 処理
+					// are you OK !
+					System.out.println("No");
+
+				} while(i > 100);
+
+//		// ①
+//		for (int o = 0; o <= 100; o++) {
+//			System.out.println(" o : " + o);
+//			o = o + 1;
+//		}
+//
+//		// ②
+//		for (int i = 0; i <= 100; i++) {
+//			if (i % 2 == 0) {
+//				System.out.println(i);
+//			}
+//		}
 
 		//
 		//		// 1  所有的鸡都把脚抬起来了
