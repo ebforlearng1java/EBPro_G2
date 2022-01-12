@@ -11,10 +11,8 @@ public class JavaHomeWork01 {
 
 		// home work dummy commit 2
 		// home work dummy commit 3
-
-
-
 		// home work dummy commit 4
+		// home work dummy commit 5
 	}
 
 }
