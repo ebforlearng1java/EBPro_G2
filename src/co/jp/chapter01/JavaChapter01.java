@@ -34,10 +34,10 @@ public class JavaChapter01 {
 //		int d = 3;
 //		System.out.println("c % d = " + (c % d));
 		
-		int a = 1;
-		int b = 1;
+//		int a = 1;
+//		int b = 1;
 		
-		System.out.println(a == b);
+//		System.out.println(a == b);
 		
 		
 	}
