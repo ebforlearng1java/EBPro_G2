@@ -23,6 +23,8 @@ public class JavaHomeWork01 {
 		//“==”是关系符号， 返回值是true或false。
 		
 		//Q4
+		//ブリアン（ boolean ）変数に設定可能の値は「true」「false」。
+		
 		// dummy commit
 	}
 
