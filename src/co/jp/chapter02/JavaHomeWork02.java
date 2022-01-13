@@ -7,6 +7,7 @@ public class JavaHomeWork02 {
 	//Q1
 	System.out.println("this is line1\tthis line2");
 	//1行出力します。
+	//\t→Tab 改行は\nである。
 	
 	//Q2
 	//Stringを比較（する）方法はequalsである。
