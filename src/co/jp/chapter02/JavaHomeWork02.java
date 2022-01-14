@@ -6,8 +6,8 @@ public class JavaHomeWork02 {
 		/*
 
 		質問１︓System.out.println("this is line1\tthis line2"); は何行出力しますか？
-		1. １行
-		2. ２行	√
+		1. １行	√
+		2. ２行
 
 		質問２︓Stringを比較方法は？
 		1. ==
