@@ -13,21 +13,20 @@ public class JavaHomeWork01 {
     System.out.println("Hello java");
 
     
-    //質問１︓以下変数nの値は︖
-   
-        // int i = 10;   a = 10
-        // int n = i % 5;  a = 0
+    //質問１︓以下変数nの値は︖  // int i = 10;  int n = i % 5; 
+      // A: a = 0
     
     //質問２︓ 右の式を解釈してください: a = a > 10 ? 11 : 0;  
-        //条件 a = a > 10;
-        //trueならば  : 10;
-        //falseならば : 0;
+      // A:
+      //条件 a = a > 10;
+      //trueならば  : 10;
+      //falseならば : 0;
        
     //質問３︓変数値を⽐較する演算⼦は = or == ? 
-    // ==
+      // A: ==
        
     //質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」  
-    // 「true」「false」
+      // A:「true」「false」
     
 		
 	}
