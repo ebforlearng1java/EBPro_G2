@@ -4,6 +4,7 @@ public class JavaHomeWork01 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
+<<<<<<< HEAD
 //		質問１︓以下変数nの値は︖
 //		int i = 10;
 //		int n = i%5;
@@ -14,6 +15,10 @@ public class JavaHomeWork01 {
 		//答え: ==
 //	    質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
         //答え：「true」「false」
+=======
+
+
+>>>>>>> origin/henan0829
 		// dummy commit
 	}
 

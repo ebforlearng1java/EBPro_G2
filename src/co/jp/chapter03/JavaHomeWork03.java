@@ -47,3 +47,8 @@ public class JavaHomeWork03 {
 		//あとで
 	}
 }
+
+
+
+
+
