@@ -5,7 +5,7 @@ public class JavaHomeWork02 {
 	public static void main(String[] args) {
 		/*
 
-		質問１︓System.out.println("this is line1\tthis line2");は何行出力しますか？
+		質問１︓System.out.println("this is line1\tthis line2"); は何行出力しますか？
 		1. １行
 		2. ２行	√
 
