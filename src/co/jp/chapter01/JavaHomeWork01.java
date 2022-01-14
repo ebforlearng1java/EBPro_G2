@@ -11,16 +11,7 @@ public class JavaHomeWork01 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
     System.out.println("Hello java");
-    
-    int a = 10;
-    int b = 20;
-    
-    System.out.println("a + b =" + (a + b));
-    
-    int c = 10;
-    int d = 20;
-    
-    System.out.println("d % c =" + (d % c));
+
     
     //質問１︓以下変数nの値は︖
    
@@ -32,11 +23,13 @@ public class JavaHomeWork01 {
         //trueならば  : 10;
         //falseならば : 0;
        
-    //質問３︓変数値を⽐較する演算⼦は = or == ? // ==
+    //質問３︓変数値を⽐較する演算⼦は = or == ? 
+    // ==
        
-    //質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」  // 「true」「false」
+    //質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」  
+    // 「true」「false」
     
-		// dummy commit
+		
 	}
 
 }
