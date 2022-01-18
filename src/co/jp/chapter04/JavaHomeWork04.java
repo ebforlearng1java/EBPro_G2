@@ -54,8 +54,9 @@ public class JavaHomeWork04 {
 		//		答え：
 		//		int sum = 0;
 		//		for(i=0,  i < ,i++) {
-		//			sum += new int[i]
+		//			sum += new int[i];
 		//		}
+		//		System.out.printf("この配列の和は%d\n", sum);
 		
 		
 		//		問題７︓⾏列（２次元配列）の和と積を計算してください。
