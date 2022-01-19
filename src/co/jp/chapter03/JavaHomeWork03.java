@@ -108,8 +108,7 @@ public class JavaHomeWork03 {
 	   Cplus = 0;
 	   
 	   System.out.printf("３３４０円の一番少ないコイン数の組み合わせは%d枚です。", CSum);
-	}
-	 
 	   }
-	}
+	 
+   }
 }
