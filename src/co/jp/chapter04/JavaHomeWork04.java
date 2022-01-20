@@ -78,5 +78,6 @@ public class JavaHomeWork04 {
 //			
 //			
 //	}
-//
-//}
+//        変更
+           }
+}
