@@ -78,7 +78,7 @@ public class JavaHomeWork05 {
 //		}
 		
 		
-//		質問７︓配列を昇順でソートする（java.util等メソッド利⽤禁⽌）。
+//		質問７︓配列を昇順でソートする（java.util等メソッド利⽤禁⽌）。 
 //		回答７：
 		for(int i=0;i<array.length;i++) {
 			for(int j=i+1;j<array.length;j++) {
