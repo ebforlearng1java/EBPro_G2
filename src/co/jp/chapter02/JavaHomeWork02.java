@@ -16,8 +16,8 @@ public class JavaHomeWork02 {
 		//回答：1. 3.0    2.  1.02.0
 		//質問５︓以下ステートメントの出⼒を記載してください。 
 		//public static void main(String[] args) {
-		 int a = 10;
-		 System.out.println("a");
+//		 int a = 10;
+//		 System.out.println("a");
 		 //回答：a
 		
 
@@ -26,15 +26,6 @@ public class JavaHomeWork02 {
 
 		
 		
-		質問２︓Stringを⽐較⽅法は︖ 1. == 2. equals
-		質問３︓Float値⇒String⽂字列変更する場合、どうなメソッドを利⽤しますか 1. String.valueOf(“1.0F“) 2. 1.0F + ““ 
-		質問４︓以下式の値を記載してください。
-		1. 1.0 + 2.0 2. 1.0 + “2.0“ 
-		質問５︓以下ステートメントの出⼒を記載してください。 いいね 1 番に「いいね」しましょう ⽂字 説明 \' ' \" “ \\ \ \t Tab \n 改⾏ 1234 public static void main(String[] args) {
-				 int a = 10;
-				 System.out.println("a"); }
-
 
 	}
-
 }
