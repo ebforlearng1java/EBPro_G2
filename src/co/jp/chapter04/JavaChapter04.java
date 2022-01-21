@@ -4,7 +4,18 @@ public class JavaChapter04 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-
+		
+//		System.out.println(String.valueOf("1.0F"));
+//		System.out.println(String.valueOf(1.0F));
+//		System.out.println(1.0F +"");
+//        
+		
+//		int[] array = new int[] {5, 6, 7, 8};
+//		for(int i = 0; i < array.length; i++) {
+//			System.out.println(array[i]);
+//		}  // 5.6.7.8
+		
+		
     //int i= 0;
 		
 //    int[] int_max = { 0, 1, 2, 3, 4,5};
