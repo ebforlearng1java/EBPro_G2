@@ -30,21 +30,21 @@ public class JavaHomeWork03 {
 //	  int total = 3340;
 //	  // 1円
 //	  int a = 0;
-//	  int a_1 = 1;
+//	  float a_1 =(float) 1;
 //	  // 5円
 //	  int b = 0;
-//	  int b_1 = 5;
+//	  float b_1 =(float) 5;
 //		// 10円
 //	  int c = 0;
-//	  int c_1 = 10;
+//	  float c_1 = (float) 10;
 //	  // 50円
 //	  int d = 0;
-//	  int d_1 = 50;
+//	  float d_1 =(float) 50;
 //	  //100円
 //	  int e = 0;
-//    int e_1= 100;
+//    float e_1=(float) 100;
 
-		//あとで
+
 	}
 }
 
