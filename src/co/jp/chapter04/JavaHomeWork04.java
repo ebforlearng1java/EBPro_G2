@@ -58,8 +58,44 @@ public class JavaHomeWork04 {
 				sum = sum + array[i];
 		}
 			System.out.println(sum);
-*/			
+*/	
+	
+	//問題７︓⾏列（２次元配列）の和と積を計算してください。
+	
+/*回答:	  
+		int[][] array1 = {{1,2},{3,4}};
+		int[][] array2 = {{5,6},{7,8}};
+		int[][] arraysum = new int[2][2];
+		int[][] arraymul = new int[2][2];
+		for(int i = 0; i < 2; i++) 
+		{
+			for(int j = 0; j < 2; j++)
+			{
+				arraysum[i][j] = array1[i][j] + array2[i][j];
+				arraymul[i][j] = array1[i][j] * array2[i][j];
+			}
+		}
+		for(int i = 0; i < 2; i++)
+		{
+			for(int j = 0; j < 2; j++)
+			{
+				System.out.println("the sum is " + arraysum[i][j]);
+				System.out.println("the product is " + arraymul[i][j]);
+			}
+	
+		}
+	}
+}
 	
 			
+			
+			
+			
+			
+*/			
+	
+		
+	
+	
 	}		
 
