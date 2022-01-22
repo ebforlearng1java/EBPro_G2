@@ -99,8 +99,8 @@ public class JavaHomeWork05 {
 		
 		System.out.println("【質問8】");
 		int[][] triangle = new int[10][10]; // 构建10x10二维数组作为构建三角所用
-		for (int i = 0; i < 10; i++) { // 行数循环
-			for (int j = 0; j <= i; j++) { // 每行的列数循环
+		for (int i = 0; i < 10; i++) { // 行的循环
+			for (int j = 0; j <= i; j++) { // 每行上列的循环
 				if (j == 0 || j == i) {
 					triangle[i][j] = 1; // 三角边缘数值为1
 				} else {

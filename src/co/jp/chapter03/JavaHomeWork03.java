@@ -25,8 +25,8 @@ public class JavaHomeWork03 {
 
 		// 问题二解答：
 
-		// 硬币组合的可能的结果有几千种 此处仅计算使硬币枚数最少的最优解
-		// 题干信息中忘了提及五十円硬币 下列方法中把五十円硬币也一并纳入
+		// 硬币组合的可能的结果有几千种, 此处仅计算使硬币枚数最少的最优解
+		// 题干信息中忘了提及五十円硬币, 下列方法中把五十円硬币也一并纳入
 
 		int money = 3340;
 		int coin1 = 0, coin10 = 0, coin100 = 0;
@@ -56,6 +56,7 @@ public class JavaHomeWork03 {
 			coin1++;
 			money -= 1;
 		}
+		
 		System.out.println("500円枚数：" + coin500);
 		System.out.println("100円枚数：" + coin100);
 		System.out.println("50円枚数：" + coin50);

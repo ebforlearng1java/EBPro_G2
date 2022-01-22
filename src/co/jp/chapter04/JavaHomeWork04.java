@@ -4,7 +4,7 @@ public class JavaHomeWork04 {
 
 	public static void main(String[] args) {
 		// 問題１︓int[] array = new int[4]; 各要素の値を記載してください。
-		// array[0]的值为0，array[1]的值为0，array[2]的值为0，int[3]的值为0。
+		// array[0]的值为0，array[1]的值为0，array[2]的值为0，array[3]的值为0。
 
 		// 問題２︓int[] array = new int[] {5, 6}; 各要素の値を記載してください。
 		// array[0]的值为5，array[1]的值为6。
