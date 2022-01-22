@@ -45,6 +45,7 @@ public class JavaHomeWork05 {
 
 		System.out.println("【質問4】");
 		// 此处直接用第三问中的数组，不再构造新数组。
+		// int arrayQ3[] = new int[] { 1, 2, 6, 7, 9, 6, 2, 1 };
 		for (int i = 0; i < arrayQ3.length; i++) { // 下标i的循环，array[i]作为第一个对比数
 			for (int j = i + 1; j < arrayQ3.length; j++) { // i+1的基础上下标j的循环，array[j]作为第二个对比数
 				if (arrayQ3[i] == arrayQ3[j]) {
@@ -57,6 +58,7 @@ public class JavaHomeWork05 {
 		
 		System.out.println("【質問5】");
 		// 此处直接用第三问中的数组，不再构造新数组。
+		// int arrayQ3[] = new int[] { 1, 2, 6, 7, 9, 6, 2, 1 };
 		for (int index = 0; index < arrayQ3.length; index++) { 
 			if(arrayQ3[index]==7) {
 				System.out.println(index);
@@ -66,10 +68,10 @@ public class JavaHomeWork05 {
 		// 質問６︓任意行列（２次元配列）の積を求める。
 		
 		// 此处以构建一个3x3的二维数组为例。实际代码可替换为输入的任意二维数组
-		int[][] array_2D = new int[][] { { -1, 2, 1 }, { 3, 2, 3 }, { -1, -3, -4 }};
+		int[][] array2D = new int[][] { { -1, 2, 1 }, { 3, 2, 3 }, { -1, -3, -4 }};
 		// 主要思路为二重foreach循环并逐个计算乘积
 		int mul = 1;
-		for (int[] outer : array_2D) {
+		for (int[] outer : array2D) {
 			for (int value : outer) {
 				mul *= value;
 			}

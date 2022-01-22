@@ -4,14 +4,14 @@ public class JavaHomeWork04 {
 
 	public static void main(String[] args) {
 		// 問題１︓int[] array = new int[4]; 各要素の値を記載してください。
-		// int[0]的值为0，int[1]的值为0，int[2]的值为0，int[3]的值为0。
+		// array[0]的值为0，array[1]的值为0，array[2]的值为0，int[3]的值为0。
 
 		// 問題２︓int[] array = new int[] {5, 6}; 各要素の値を記載してください。
-		// int[0]的值为5，int[1]的值为6。
+		// array[0]的值为5，array[1]的值为6。
 
 		// 問題３︓int[][] array = new int[2][3]; 各要素の値を記載してください。
-		// int[0][0]的值为0，int[0][1]的值为0，int[0][2]的值为0。
-		// int[1][0]的值为0，int[1][1]的值为0，int[1][2]的值为0。
+		// array[0][0]的值为0，array[0][1]的值为0，array[0][2]的值为0。
+		// array[1][0]的值为0，array[1][1]的值为0，array[1][2]的值为0。
 
 		// 問題４︓以下２重Foreachを理解してください。
 
@@ -44,7 +44,7 @@ public class JavaHomeWork04 {
 
 		// 問題７︓行列（２次元配列）の和と積を計算してください。
 
-		// 此处以构建一个4x3的二位数组为例。
+		// 此处以构建一个4x3的二维数组为例。
 		int[][] array_2D = new int[][] { { 2, 2, 1 }, { 3, 5, 3 }, { -1, -3, -4 }, { 5, 10, 2 } };
 		// 主要思路为在类似問題４的二重foreach循环的基础上，搭配记录“和と積”数值的变量plus与mult。
 		int plus = 0;
