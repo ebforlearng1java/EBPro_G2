@@ -18,12 +18,39 @@ public class JavaChapter08 {
 		ludi.speck("aaa");
 
 		// 孩子1
-		Dog dog = new Dog(true, 4, new String[10], "2000", "fuafua");
+		Dog dog = new Dog(true, 4, new String[10], "2000", new Mao());
 
 		dog.speck();
 
 
-		System.out.println(dog.alive);
+
+		System.out.println(ani instanceof Animal);
+
+		System.out.println((Animal)ludi instanceof Animal);
+
+		System.out.println((Animal)dog instanceof Animal);
+
+
+		System.out.println(ani instanceof Dog);
+
+		System.out.println((Animal)ludi instanceof Dog);
+
+		System.out.println((Animal)dog instanceof Dog);
+
+
+
+		System.out.println(ani.toString());
+
+
+		int a = 123456;// int ⇔ String
+//		float
+		System.out.println((float)a);
+		float b = 1.45f;
+
+		System.out.println((int)b);
+
+
+//		System.out.println(dog.alive);
 
 
 

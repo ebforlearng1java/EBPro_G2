@@ -3,6 +3,26 @@ package co.jp.chapter03;
 public class JavaChapter03 {
 
 	public static void main(String[] args) {
+
+		int a = 10;
+
+		// a > 1 && a < 100
+
+//		switch (a > 1 && a < 100 ? 1 : 0) {
+//		case 1:
+//			System.out.println("a>1");
+//			
+//			if () {
+//				
+//			} else {
+//				
+//			}
+//			break;
+//			
+//		case 0:
+//			System.out.println("a>1");
+//		}
+
 		// TODO 自動生成されたメソッド・スタブ
 		//		int tamago = 5;
 		//		int tomato = 3;
@@ -117,39 +137,37 @@ public class JavaChapter03 {
 		//				break;
 		//			}
 		//		}
-				int i = 0;
-//				while (true) {
-//					if (i % 2 == 0) {
-//						System.out.println(i);
-//					}
-//					i++;
-//					if (i > 100) {
-//						break;
-//					}
-//				}
+		int i = 0;
+		//				while (true) {
+		//					if (i % 2 == 0) {
+		//						System.out.println(i);
+		//					}
+		//					i++;
+		//					if (i > 100) {
+		//						break;
+		//					}
+		//				}
 
+		do {
 
-				do {
+			// 処理
+			// are you OK !
+			System.out.println("No");
 
+		} while (i > 100);
 
-					// 処理
-					// are you OK !
-					System.out.println("No");
-
-				} while(i > 100);
-
-//		// ①
-//		for (int o = 0; o <= 100; o++) {
-//			System.out.println(" o : " + o);
-//			o = o + 1;
-//		}
-//
-//		// ②
-//		for (int i = 0; i <= 100; i++) {
-//			if (i % 2 == 0) {
-//				System.out.println(i);
-//			}
-//		}
+		//		// ①
+		//		for (int o = 0; o <= 100; o++) {
+		//			System.out.println(" o : " + o);
+		//			o = o + 1;
+		//		}
+		//
+		//		// ②
+		//		for (int i = 0; i <= 100; i++) {
+		//			if (i % 2 == 0) {
+		//				System.out.println(i);
+		//			}
+		//		}
 
 		//
 		//		// 1  所有的鸡都把脚抬起来了
