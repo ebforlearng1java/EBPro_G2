@@ -82,6 +82,15 @@ public class JavaHomeWork07 {
 					//....
 					return ???
 				}
+				
+				public static void main(String[] args) {
+					int[] array2 = new int[]{7, 6, 2, 6, 7, 9, 6, 2, 1};
+					int max2 = max2(array2);
+					int min2 = min2(array2);
+					data = add;
+
+					System.out.printf("Matrixの和は：%d\n", data);
+				} 
 			}
 			
 
