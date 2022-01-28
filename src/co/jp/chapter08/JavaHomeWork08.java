@@ -65,7 +65,7 @@ public class JavaHomeWork08 {
 		public static void print(Child v) {
 			v.hello();
 		}
-		public static void main(String...args) {
+		public static void main(String[] args) {
 			print(new Parent());
 			print(new Child());
 		} 
