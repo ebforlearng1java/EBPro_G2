@@ -40,6 +40,10 @@ public class JavaHomeWork08 {
 			System.out.println(x.equals(y)); // true ? false? 原因は ?
 		} 
 	}
+//	答え：
+//	false
+//	true
+
 
 	
 //	質問３︓以下コンパイルを修正してください。
