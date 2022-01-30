@@ -27,8 +27,10 @@ public class JavaHomeWork03 {
 		 int hundred;
 		 int fivehundred;
 		 int total = 3340;
-		 one + 5*five +
-		 if(one == 0) {
+		 
+		 if(one == 0 && five == 0 && hundred == 0 && fivehundred == 0) {
+			 ten = 3340/10;
+			 System.out.println("１円 + one + 枚、５円+ five + 枚、１０円+ ten+ 枚、１００円+ hundred + 枚、５００円+ fivehundred+ 枚");
 	      
 		 
 		 
