@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>予約申請</title>
+    <link th:href="@{/css/invoice_apply.css}" type="text/css" rel="stylesheet" />
+    <script th:src="@{/js/vc/invoice_apply.js}" type="text/javascript" rel="script" ></script>
+    <script th:src="@{/js/jquery-3.6.0.min.js}" ></script>
+</head>
+<body>
+<!-- head  -->
+<div class="head_div">
+    <div id="title_font">
+        <p id="title_p">予約・申請</p>
+    </div>
+</div>
+<!-- main  -->
+<div class="main_div">
+    <!-- menu -->
+    <div class="menu_div">
+        <!-- center -->
+        <div id="m_center_div">
+            <div id="form_div">
+                <form th:action="@{/invoiceUpload}" method="post" id="form_obj">
+                    <table>
+                        <tr>
+                            <td>
+                                　<label id="visit_name_label" class="base_label">お名前</label>
+                            </td>
+                            <td>
+                                <input type="text" name="visit_name" id="visit_name_input" onchange="onMouseMoveOutCheckValue('visit_name_input','visit_name_alert')"  onmousemove="onMouseMoveOutCheckValue('visit_name_input','visit_name_alert')" onmouseout="onMouseMoveOutCheckValue('visit_name_input','visit_name_alert')" />
+                            </td>
+                            <td>
+                                <img src="" class="alert_img" hidden id="visit_name_alert" />
+                            </td>
+                        </tr>
+                        <!-- phone -->
+                        <tr>
+                            <td>
+                                　<label id="visit_phone_label" class="base_label">お電話</label>
+                            </td>
+                            <td>
+                                <input type="tel" name="visit_phone" id="visit_phone_input"  onchange="onMouseMoveOutCheckPhone('visit_phone_input','visit_phone_alert')" onmousemove="onMouseMoveOutCheckPhone('visit_phone_input','visit_phone_alert')" onmouseout="onMouseMoveOutCheckPhone('visit_phone_input','visit_phone_alert')" />
+                            </td>
+                            <td>
+                                <img src="" class="alert_img" hidden id="visit_phone_alert"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                　<label id="category_label" class="base_label">動物種類</label>
+                            </td>
+                            <td>
+                                <select id="category_select" name="category">
+                                    <option th:each="al:${animal_list}" th:value="${al.aid}" th:text="${al.name}"></option>
+                                </select>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <!--　// -->
+                        <tr>
+                            <td>
+                                　<label id="first_visit_label" class="base_label">初診</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="first_visit_radio" checked value="0"  class="first_visit_radio" />
+                                <label>はい</label>
+                                <input type="radio" name="first_visit_radio"  value="1"  class="first_visit_radio" />
+                                <label>いいえ</label>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="submit" name="submit_button" value="申請" onclick="onFormClick()" onmouseout="onMouseOutSubmitButton('submit_button_css')" onmousemove="onMouseMoveSubmitButton('submit_button_css')" id="submit_button_css" />
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+
+
+
+
+                    </table>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- right -->
+    </div>
+</div>
+<!-- bottom -->
+<div class="bottom_div">
+
+
+</div>
+
+<footer id="footer_style">
+    <p id="footer_p01"><small>Copyright&copy;2022 WinterCat.Project All Rights Reserved.</small></p>
+    <p id="footer_p02"><small>このサイトに関するお問い合わせ先：<a href="https://www.wintercat.jp" id="author_link">wintercat.jp</a></small></p>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

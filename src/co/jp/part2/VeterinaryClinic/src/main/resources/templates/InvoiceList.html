@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>予約一覧</title>
+    <link th:href="@{/css/invoice_list.css}" type="text/css" rel="stylesheet" />
+    <script th:src="@{/js/vc/invoice_list.js}" type="text/javascript" rel="script" ></script>
+    <script th:src="@{/js/jquery-3.6.0.min.js}" ></script>
+</head>
+<body>
+<!-- head  -->
+<div class="head_div">
+    <div id="title_font">
+        <p id="title_p">予約・一覧</p>
+    </div>
+</div>
+<!-- main  -->
+<div class="main_div">
+    <!-- menu -->
+    <div class="menu_div">
+        <!-- left -->
+        <div id="m_left_div">
+            <table class="table_class_css">
+                <tr>
+                    <td class="th_td_left_01">予約総件数:</td>
+                    <td class="th_td_i01" th:text="${all}+'件'"></td>
+                </tr>
+                <tr>
+                    <td class="th_td_left_01">未処理件数:</td>
+                    <td class="th_td_i01" th:text="${untreated}+'件'"></td>
+                </tr>
+                <tr>
+                    <td class="th_td_left_01">処理済件数:</td>
+                    <td class="th_td_i01" th:text="${processed}+'件'"></td>
+                </tr>
+                <tr>
+                    <td class="th_td_left_01">支払い済件数:</td>
+                    <td class="th_td_i01" th:text="${prepay}+'件'"></td>
+                </tr>
+                <tr>
+                    <td class="th_td_left_01">キャンセル済件数:</td>
+                    <td class="th_td_i01" th:text="${canceled}+'件'"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="back_tr"></td>
+                    <td id="back_button" onclick="onReturnButtonClick()" onmousemove="onReturnButtonMove('back_button')" onmouseout="onReturnButtonOut('back_button')">戻る</td>
+                </tr>
+            </table>
+        </div>
+        <!-- center -->
+        <div id="m_center_div">
+            <table class="table_class_css">
+                <thead>
+                    <tr>
+                        <td class="th_td_01">予約番号</td>
+                        <td class="th_td_02">予約名</td>
+                        <td class="th_td_03">電話番号</td>
+                        <td class="th_td_05">予約日時</td>
+                        <td class="th_td_04">初診</td>
+                        <td class="th_td_04">操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="a_list:${all_invoice}">
+                        <td class="th_td_i01" th:text="${a_list.invoiceNumber}"></td>
+                        <td class="th_td_i02" th:text="${a_list.invoiceName}"></td>
+                        <td class="th_td_i03" th:text="${a_list.phone}"></td>
+                        <td class="th_td_i05" th:text="${#dates.setFormat(a_list.createInvoiceDate,'yyyy-MM-dd HH:mm')[0]}"></td>
+                        <td class="th_td_i04">
+                            <img th:src="@{/image/invoice_apply/wrong.png}" th:if="${a_list.clinicalRecords.firstVisit} eq 1"   class="th_td_i04_01" />
+                            <img th:src="@{/image/invoice_apply/success.png}" th:if="${a_list.clinicalRecords.firstVisit} eq 0"   class="th_td_i04_01" />
+                        </td>
+                        <td class="th_td_i00" th:id="'management_id_'+${a_list.id}" th:onclick="'javascript:onManagementButtonClick('+${a_list.id}+');'" th:onmousemove="'javascript:onManagementButtonMove(\'management_id_'+${a_list.id}+'\')'" th:onmouseout="'javascript:onManagementButtonOut(\'management_id_'+${a_list.id}+'\')'">管理</td>
+                    </tr>
+                    <!-- -->
+                </tbody>
+            </table>
+            <a th:if="${!page.first}" th:href="@{/invoiceList/pages(page=${page.number}-1)}">前</a>
+            <a th:text="${page.getNumber()+1}"></a>/<a th:text="${page.getTotalPages()}"></a>
+            <a th:href="@{/invoiceList/pages(page=${page.number}+1)}" th:if="${!page.last}">次</a>
+            <a href="/"></a>
+        </div>
+    </div>
+</div>
+<!-- bottom -->
+<div class="bottom_div">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

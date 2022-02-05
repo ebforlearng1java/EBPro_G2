@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "JayCons";
+    src: url("/static/font/Jaycons.ttf")format("ttf");
+}
+body {
+    text-align: center;
+    background-color: rgba(235 235 235);
+}
+ul li{
+     list-style-type: none;
+     margin: 10px 0;
+
+}
+.head_div{
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#title_font{
+    width: auto;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+}
+
+#title_p{
+    font-family: "JayCons",serif;
+    font-size: 50px;
+    margin: 20px auto;
+    position: relative;
+    color:gray;
+}
+#title_p_ver{
+    font-family: "JayCons",serif;
+    font-size: 20px;
+    position: relative;
+    color:gray;
+}
+.main_div{
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.menu_div{
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom_div{
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+#m_left_div{
+    width: 28%;
+    height: 400px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+#m_right_div{
+    width: 28%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+#m_center_div{
+    width: 40%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+
+/*  button css */
+.menu_button{
+    font-family: "JayCons",serif;
+    height: 60px;
+    width: 200px;
+    color: rgba(54 54 54);
+    position: relative;
+    border: 2px solid dimgray;
+    cursor: pointer;
+    border-radius: 5px;
+    background: white;
+}
+
+
+#footer_style {
+    display: block;
+}
+
+#footer_p01 {
+    font-family: "JayCons",serif;
+    font-size: 14px;
+    color: gray;
+}
+
+#footer_p02 {
+    font-family: "JayCons", serif;
+    font-size: 15px;
+    color: gray;
+}

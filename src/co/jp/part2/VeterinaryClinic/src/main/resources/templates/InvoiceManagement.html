@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>予約管理</title>
+    <link th:href="@{/css/invoice_management.css}" type="text/css" rel="stylesheet" />
+    <script th:src="@{/js/vc/invoice_management.js}" type="text/javascript" rel="script" ></script>
+    <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+</head>
+<body>
+<!-- head  -->
+<div class="head_div">
+    <div id="title_font">
+        <p id="title_p">予約・管理</p>
+    </div>
+</div>
+<!-- main  -->
+<div class="main_div">
+    <!-- menu -->
+    <div class="menu_div">
+        <!-- left -->
+        <div id="m_left_div">
+            <!-- カルテ -->
+
+        </div>
+        <!-- center -->
+        <div id="m_center_div">
+            <div id="invoice_div">
+                <form th:action="@{/invoiceManagementUpdate}" method="post" id="form_obj" >
+                    <table class="table_style_right">
+                        <thead>
+                        <tr>
+                            <td>
+                                <input th:value="${invoice.invoiceNumber}" th:name="invoice_number" th:type="hidden"/>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="invoice_all_td">請求番号</td>
+                                <td class="invoice_input_readonly" th:text="${invoice.invoiceNumber}"></td>
+                                <td class="alert_input_css">※編集不可項目</td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">お名前</td>
+                                <td>
+                                    <input th:value="${invoice.invoiceName}" th:name="visit_name" class="invoice_input_0" id="visit_name_input" type="text" maxlength="10" onmousemove="onMouseMoveOutCheckValue('visit_name_input','visit_name_alert')" onmouseout="onMouseMoveOutCheckValue('visit_name_input','visit_name_alert')"/>
+                                </td>
+                                <td><img src="" class="alert_img" id="visit_name_alert" hidden /></td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">お電話</td>
+                                <td><input th:value="${invoice.phone}" class="invoice_input_0" th:name="visit_phone"  id="visit_phone_input" type="tel" maxlength="13"  onmousemove="onMouseMoveOutCheckPhone('visit_phone_input','visit_phone_alert')" onmouseout="onMouseMoveOutCheckPhone('visit_phone_input','visit_phone_alert')" /></td>
+                                <td><img src="" class="alert_img" hidden id="visit_phone_alert"/></td>
+                            </tr>
+                            <!-- //  -->
+                            <tr>
+                                <td class="r_tr_01">宿泊</td>
+                                <td>
+                                    <select class="r_tr_01_select" name="lodging">
+                                        <option value="1" th:selected="${invoice.clinicalRecords.lodging==1}">必要</option>
+                                        <option value="0" th:selected="${invoice.clinicalRecords.lodging==0}">なし</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="r_tr_01">食事サポート</td>
+                                <td>
+                                    <select class="r_tr_01_select" name="meal">
+                                        <option th:value="1" th:selected="${invoice.clinicalRecords.meal==1}">必要</option>
+                                        <option th:value="0" th:selected="${invoice.clinicalRecords.meal==0}">なし</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">動物種類</td>
+                                <td>
+                                    <select class="category_css" id="category_id" name="category">
+                                        <option th:each="al:${animal_list}" th:selected="${al.aid==invoice.animal.aid}" th:value="${al.aid}" th:text="${al.name}"></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">申請日時</td>
+                                <td  class="invoice_input_readonly"  th:text="${#dates.setFormat(invoice.createInvoiceDate,'yyyy-MM-dd HH:mm').toArray()[0]}" ></td>
+                                <td class="alert_input_css">※編集不可項目</td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">手続き更新時間</td>
+                                <td  class="invoice_input_readonly" th:if="${invoice.updateInvoiceDate!=null}" th:text="${#dates.setFormat(invoice.updateInvoiceDate,'yyyy-MM-dd HH:mm').toArray()[0]}"></td>
+                                <td class="invoice_input_readonly" th:if="${invoice.updateInvoiceDate==null}"></td>
+                                <td class="alert_input_css">※編集不可項目</td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">支払い日時</td>
+                                <td  class="invoice_input_readonly" th:if="${invoice.paymentDeadline!=null}" th:text="${#dates.setFormat(invoice.paymentDeadline,'yyyy-MM-dd HH:mm')}"></td>
+                                <td class="invoice_input_readonly" th:if="${invoice.paymentDeadline==null}"></td>
+                                <td class="alert_input_css">※編集不可項目</td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">金額</td>
+                                <td  class="invoice_input_readonly" th:text="${total}"></td>
+                                <td class="alert_input_css">※編集不可項目</td>
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">処理状態</td>
+                                <td class="invoice_input_readonly" th:if="${invoice.invoiceState==1}">処理済</td>
+                                <td class="invoice_input_readonly" th:if="${invoice.invoiceState==0}">未処理</td>
+                                <td class="invoice_input_readonly" th:if="${invoice.invoiceState==99}">支払い済</td>
+                                <td class="invoice_input_readonly" th:if="${invoice.invoiceState==-1}">キャンセル済</td>
+
+                            </tr>
+                            <tr>
+                                <td class="invoice_all_td">初診者</td>
+                                <td><input type="radio" name="first_visit"  th:checked="${invoice.clinicalRecords.firstVisit==0}" th:value="0" class="radio_box_css" />
+                                    <label>対象者</label>
+                                    <input  type="radio"  name="first_visit" th:checked="${invoice.clinicalRecords.firstVisit==1}" th:value="1" class="radio_box_css" />
+                                    <label>対象外</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button type="submit" name="submit_button" id="submit_button_id" class="submit_button" onmousemove="onSubmitButtonMove('submit_button_id')" onmouseout="onSubmitButtonOut('submit_button_id')" onclick="onSubmitButtonClick()">更新</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button type="button" name="back_button" id="back_button" class="submit_button" onmousemove="onBackButtonMove('back_button')" onmouseout="onBackButtonOut('back_button')" onclick="onBackButtonClick()">戻る</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- right -->
+        <div id="m_right_div">
+
+
+        </div>
+    </div>
+</div>
+<!-- bottom -->
+<div class="bottom_div">
+
+
+</div>
+
+</body>
+</html>

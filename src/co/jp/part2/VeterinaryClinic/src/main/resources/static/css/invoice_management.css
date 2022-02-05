@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "JayCons";
+    src: url("/static/font/Jaycons.ttf")format("ttf");
+}
+body {
+    text-align: center;
+    background-color: rgba(235 235 235);
+}
+ul li{
+    list-style-type: none;
+    margin: 10px 0;
+
+}
+.head_div{
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#title_font{
+    width: auto;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+}
+
+#title_p{
+    font-family: "Corporate";
+    font-size: 50px;
+    margin: 20px auto;
+    position: relative;
+    color:gray;
+}
+.main_div{
+    width: auto;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.menu_div{
+    width: auto;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom_div{
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+#m_left_div{
+    width: 28%;
+    height: 600px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+}
+#m_right_div{
+    width: 28%;
+    height: 600px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+#m_center_div{
+    width: 40%;
+    height: 600px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+.table_style_left{
+    margin: 0 auto;
+    overflow:auto;
+}
+.table_style_right{
+    margin: 0 auto;
+    overflow:auto;
+}
+.table_style_middle{
+    margin: 0 auto;
+    overflow:auto;
+}
+/* record */
+.r_tr_01{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    float: left;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.r_tr_01_select{
+    font-family: "JayCons";
+    width: 250px;
+    height: 29px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.r_td_drug_01{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.r_td_drug_list{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(216 191 216);
+}
+.r_td_drug_count{
+    font-family: "JayCons";
+    width: 100px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    float: left;
+}
+.r_td_drug_input{
+    font-family: "JayCons";
+    width: 50px;
+    height: 25px;
+    float: left;
+}
+.r_drug_input{
+    font-family: "JayCons";
+    width: 40px;
+    height: 25px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.invoice_all_td{
+    font-family: "JayCons";
+    width: 140px;
+    height: 25px;
+    border-radius: 4px;
+    background-color:rgba(102 205 170) ;
+}
+.invoice_total_td{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(190 190 190) ;
+}
+
+.invoice_total{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.invoice_input_readonly{
+    font-family: "JayCons";
+    width: 200px;
+    height: 25px;
+    border: 1px ;
+    font-size: 16px;
+    background-color:rgba(190 190 190);
+    cursor: default;
+    border-radius: 4px;
+}
+.invoice_input_0{
+    font-family: "JayCons";
+    width: 250px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    float: left;
+}
+.radio_box_css{
+    width: 20px;
+    height: 30px;
+    font-size: 18px;
+    margin: 5px auto;
+}
+.category_css{
+    font-family: "JayCons";
+    width: 250px;
+    height: 29px;
+    border: 1px solid;
+    border-radius: 4px;
+    float: left;
+}
+.submit_button{
+    font-family: "JayCons",serif;
+    height: 40px;
+    width: 120px;
+    color: rgba(54 54 54);
+    position: relative;
+    margin-top: 10px;
+    border: 2px solid dimgray;
+    cursor: pointer;
+    border-radius: 5px;
+    background: white;
+}
+.alert_input_css{
+    height: 29px;
+    font-family: JayCons,Serif;
+    font-size: 16px;
+    color: rgba(204,51,0);
+}
+.alert_img{
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+

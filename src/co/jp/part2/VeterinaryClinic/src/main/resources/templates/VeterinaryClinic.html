@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>動物クリニック</title>
+    <link th:href="@{/css/vc.css}" type="text/css" rel="stylesheet" />
+    <script th:src="@{/js/vc/vc.js}" type="text/javascript" rel="script" ></script>
+    <script th:src="@{/js/jquery-3.6.0.min.js}" ></script>
+</head>
+<body>
+<!-- head  -->
+<div class="head_div">
+    <div id="title_font">
+        <p id="title_p">動物クリニック管理システム</p>
+        <p id="title_p_ver">ver1.0</p>
+    </div>
+</div>
+<!-- main  -->
+<div class="main_div">
+    <!-- menu -->
+    <div class="menu_div">
+        <!-- left -->
+        <div id="m_left_div">
+            <ul>
+                <li>
+                    <p>動物システム</p>
+                </li>
+                <li>
+                    <button class="menu_button" id="animal_management" onmousemove="onMouseMoveLeftButton('animal_management')" onmouseout="onMouseMoveLeftButtonOut('animal_management')" >動物管理</button>
+                </li>
+                <li>
+                    <button class="menu_button" id="add_animal" onmousemove="onMouseMoveLeftButton('add_animal')" onmouseout="onMouseMoveLeftButtonOut('add_animal')" >動物増加</button>
+                </li>
+                <li>
+                    <button class="menu_button" id="animal_list" onmousemove="onMouseMoveLeftButton('animal_list')" onmouseout="onMouseMoveLeftButtonOut('animal_list')">動物リスト</button>
+                </li>
+            </ul>
+        </div>
+        <!-- center -->
+        <div id="m_center_div">
+              <ul>
+                  <li>
+                      <p>予約システム</p>
+                  </li>
+                  <li>
+                      <button class="menu_button" id="invoice_management" onmouseout="onMouseMoveButtonOut('invoice_management')" onmousemove="onMouseMoveButton('invoice_management')" onclick="onMouseClickButton('invoice_management')">予約管理</button>
+                  </li>
+                  <li>
+                      <button class="menu_button" id="invoice_apply" onmouseout="onMouseMoveButtonOut('invoice_apply')" onmousemove="onMouseMoveButton('invoice_apply')" onclick="onMouseClickButton('invoice_apply')">予約申請</button>
+                  </li>
+                  <li>
+                      <button class="menu_button" id="invoice_search" onmouseout="onMouseMoveButtonOut('invoice_search')" onmousemove="onMouseMoveButton('invoice_search')" onclick="onMouseClickButton('invoice_search')" >予約検索</button>
+                  </li>
+                  <li>
+                      <button class="menu_button" id="invoice_payment" onmouseout="onMouseMoveButtonOut('invoice_payment')" onmousemove="onMouseMoveButton('invoice_payment')" onclick="onMouseClickButton('invoice_payment')">請求決済</button>
+                  </li>
+              </ul>
+        </div>
+        <!-- right -->
+        <div id="m_right_div">
+            <ul>
+                <li>
+                    <p>薬物システム</p>
+                </li>
+                <li>
+                    <button class="menu_button" id="drug_management" onmouseout="onMouseMoveRightButtonOut('drug_management')" onmousemove="onMouseMoveRightButton('drug_management')">薬物管理</button>
+                </li>
+                <li>
+                    <button class="menu_button" id="drug_apply" onmouseout="onMouseMoveRightButtonOut('drug_apply')" onmousemove="onMouseMoveRightButton('drug_apply')">薬物申請</button>
+                </li>
+                <li>
+                    <button class="menu_button" id="drug_list" onmouseout="onMouseMoveRightButtonOut('drug_list')" onmousemove="onMouseMoveRightButton('drug_list')">薬物リスト</button>
+                </li>
+                <li>
+                    <button class="menu_button" id="drug_history" onmouseout="onMouseMoveRightButtonOut('drug_history')" onmousemove="onMouseMoveRightButton('drug_history')">投与履歴</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- bottom -->
+<div class="bottom_div">
+
+
+</div>
+
+<footer id="footer_style">
+    <p id="footer_p01"><small>Copyright&copy;2022 WinterCat.Project All Rights Reserved.【練習用プロジェクト:EB】</small></p>
+    <p id="footer_p02"><small>このサイトに関するお問い合わせ先：<a href="https://www.wintercat.jp" id="author_link">wintercat.jp</a></small></p>
+</footer>
+
+</body>
+</html>

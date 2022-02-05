@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "JayCons";
+    src: url("/static/font/Jaycons.ttf")format("ttf");
+}
+body {
+    text-align: center;
+    background-color: rgba(235 235 235);
+}
+ul li{
+    list-style-type: none;
+    margin: 10px 0;
+
+}
+.table_class_css{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+.head_div{
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#title_font{
+    width: auto;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+}
+
+#title_p{
+    font-family: "Corporate";
+    font-size: 50px;
+    margin: 20px auto;
+    position: relative;
+    color:gray;
+}
+.main_div{
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.menu_div{
+    width: auto;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom_div{
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+#m_left_div{
+    width: 28%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+
+}
+#m_right_div{
+    width: 10%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+#m_center_div{
+    width: 50%;
+    height: 500px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+}
+/* table */
+.th_td_01{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.th_td_02{
+    width: 125px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.th_td_03{
+    width: 150px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.th_td_04{
+    width: 50px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.th_td_05{
+    width: 160px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color:rgba(238 229 222) ;
+}
+.th_td_00{
+    width: 120px;
+    height: 25px;
+    float: left;
+}
+/* tr td information */
+.th_td_i01{
+    font-family: "JayCons";
+    width: 130px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.th_td_i02{
+    width: 125px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.th_td_i03{
+    width: 150px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.th_td_i04_01{
+    width: 25px;
+    height: 25px;
+}
+.th_td_i04{
+    width: 50px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.th_td_i05{
+    width: 160px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.th_td_i00{
+    width: 50px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.th_td_left_01{
+    font-family: "JayCons";
+    width: 150px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color:rgba(238 229 222) ;
+}
+#back_tr{
+    width: 150px;
+    height: 25px;
+    float: left;
+}
+#back_button{
+    font-family: "JayCons";
+    width: 100px;
+    height: 25px;
+    float: left;
+    border: 1px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+

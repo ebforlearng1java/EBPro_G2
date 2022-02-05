@@ -1,0 +1,96 @@
+body {
+    text-align: center;
+    background-color: rgba(235 235 235);
+}
+ul li{
+    list-style-type: none;
+    margin: 10px 0;
+
+}
+.head_div{
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#title_font{
+    width: auto;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+}
+
+#title_p{
+    font-family: "Corporate";
+    font-size: 50px;
+    margin: 20px auto;
+    position: relative;
+    color:gray;
+}
+.main_div{
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.menu_div{
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom_div{
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+#m_left_div{
+    width: 28%;
+    height: 400px;
+    margin-left: 20px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+#m_right_div{
+    width: 28%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+#m_center_div{
+    width: 40%;
+    height: 400px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+}
+/* --請求書 */
+.label_obj_01{
+    font-size: 20px;
+    font-family: "Corporate";
+}
+#invoice_div{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.invoice_li{
+    height: 30px;
+    width: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: sandybrown;
+}
+table,tr,td{
+    padding-top: 5px;
+
+}
