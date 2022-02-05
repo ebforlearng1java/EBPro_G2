@@ -11,8 +11,8 @@ public class JavaHomeWork06 {
 //		
 //		 public static void main(String[] args);
 //		回答；修饰子：public反却型：void関数名；main 引数:可变长引数 型为int or 配列
-		質問２．配列の和、MAX値、MIN値を求める処理を関数化してください、main関数に呼 び出してください
-		public static int max(int[] input) {
+//		質問２．配列の和、MAX値、MIN値を求める処理を関数化してください、main関数に呼 び出してください
+//		public static int max(int[] input) {
 //			 int MAX=0;
 //			 for(int i=0;i<input.length;i++) {
 //				 if(MAX < input[i]) {
@@ -108,4 +108,100 @@ public class JavaHomeWork06 {
 //				     }
 //				     return meger;
 //				}
+			
+//			質問６-２︓以下静的なメソッドを定義してください。 
+//			1. メソッド名: subArray 
+//			2. 引数１︓intの配列 array
+//			3. 引数２︓開始のstartIndex 
+//			4. 引数３︓⻑さlength 
+//			5. 戻り値︓intの配列
+//			6. 処理内容︓startIndexからstartIndex + lengthまでサブ配列を取得する
+//			回答：
+//			public static int[]subArray(int[]array,int startIndex,int length){
+//				startIndex = array[0];
+//				length = array.length;
+//				int []sub = {startIndex,startIndex+length};
+//						
+//				
+//					
+//				
+//				return sub;
+//						}
+//			質問７︓以下静的なメソッドを定義してください。 
+//			1. メソッド名︓trim 
+//			2. 引数１︓charの配列
+//			3. 戻り値︓charの配列 
+//			4. 処理内容︓引数１のcharの配列先頭と末尾の空⽩⽂字列を削除してください。
+//			public static char []trim(char[]input) {
+//				 char []output1 = new char[input.length-1];
+//				 char []output2 = new char[input.length-1];
+//				 char[]output3 = new char[input.length-2];
+//			     if(input[0]== ' ' && input[input.length-1]!= ' ') {
+//			    	 
+//			    	 for(int i = 0;i>input.length;i++) {
+//			    		
+//			    	 
+//			    		 output1[i]= input[i+1];
+//			    	 }
+//			    	 
+//			    	 }
+//			    
+//			    	 if(input[input.length-1]==' '&& input[0]!= ' ') {
+//			    		 
+//			    	 
+//			    		 for(int i = 0;i>input.length;i++) {
+//			    			
+//			    			 output2[i] = input[i];
+//			    		 }
+//			    		 
+//			    		
+//			    		 
+//			    			 
+//			    		 }
+//			    	 if(input[input.length-1]==' ' && input[0]== ' ' ) {
+//			    		 
+//			    		 for(int i = 0;i>input.length;i++) {
+//				    			
+//			    			 output3[i] = input[i+1];
+//			    		 }
+//			    		 
+//			    		 
+//			    	 
+//					
+//			    	 }
+//			    	 return output1;
+//			    	 
+//			    	 return output2;
+//			    	 
+//			    	 return output3;
+//			    		 
+//			    	 }
+//		}
+//}
+//		 return output2 处有bug ！！
+//		質問８︓バブルソート⽤メソッドを作成してください。 
+//		1. メソッド名︓bubbleSort 
+//		2. 引数１︓intの配列
+//		3. 戻り値︓ソート済みの配列
+//		4. 処理内容︓bubbleSortアルゴリズムを⽤い、⼊⼒した引数の配列をソートしてくださ い。
+//		public static int[]bubbleSort(int []input){
+//			for(int i=0;i<input.length;i++) {
+//				for(int j = 0;j<input.length-1;j++) {
+//					if(input[j]>input[j+1]) {
+//						int h = input[j];
+//						input[j]=input[j+1];
+//						input[j+1]=h;
+//						
+//						
+//					}
+//					
+//					
+//				}
+//				
+//			}
+//			return input;
+//		
+//	}
+//	}
+//			 
 
