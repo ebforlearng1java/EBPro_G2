@@ -59,18 +59,25 @@ public class JavaChapter01 {
 //		System.out.println(avg);
 //		System.out.println(ma);
 //		public class Kicker {
-		public static void sayHello(String y) {
-			 y = "Hello world";
-			 }
-			
-			 String x = null;
-			 sayHello(x);
-
-			 System.out.println(x);
-		}
-
-
+//		public static void sayHello(String y) {
+//			 y = "Hello world";
+//			 }
+//			
+//			 String x = null;
+//			 sayHello(x);
+//
+//			 System.out.println(x);
+//		}
+//
+//
+//		
+		int j = 0;
+		int i =  j;
+		j=3;
+		System.out.println(i
+				);
 		
+			
 		
 		
 		 
@@ -80,6 +87,7 @@ public class JavaChapter01 {
 		
 		
 	}
+}
 
 			
 		
