@@ -38,15 +38,15 @@ public class Presentation {
 			}
 
 			if ("NAME".equals(input_array[0])) {
-				name = input_array[0];
+				name = input_array[1];
 			}
 
 			if ("AGE".equals(input_array[0])) {
-				age = Integer.valueOf(input_array[0]);
+				age = Integer.valueOf(input_array[1]);
 			}
 
 			if ("TYPE".equals(input_array[0])) {
-				type = input_array[0];
+				type = input_array[1];
 			}
 
 			if (!"".equals(name) && age != 0 && !"".equals(type)) {
