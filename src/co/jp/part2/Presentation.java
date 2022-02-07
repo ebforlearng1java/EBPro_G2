@@ -129,7 +129,7 @@ public class Presentation {
 					ageValue = Integer.valueOf(info[1]);
 					typeValue = info[2];
 
-					// 三个值都有意义的话则安排入住步骤，通过switch来筛选动物类型
+					// 三个值都有意义的话则安排入住步骤，通过switch来筛选宠物类型
 					if (!"".equals(nameValue) && ageValue != 0 && !"".equals(typeValue)) {
 
 						switch (typeValue) {
