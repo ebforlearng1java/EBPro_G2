@@ -24,7 +24,7 @@ public class Presentation {
 			System.out.println("2、インタラクティブ");
 			System.out.println("3、チェックアウト");
 			System.out.println("4、空きスペースの検索");
-			System.out.println("5、予約---");
+			System.out.println("5、予約");
 			System.out.println("6、予約キャンセル");
 			System.out.println("7、ソート");
 			System.out.println("---exitを入力すれば、終了します---");
@@ -39,12 +39,13 @@ public class Presentation {
 			
 			if("1".equals(input_chose)) {
 				System.out.println("---チェックイン---");
+				System.out.println("---「チェックイン終了」を入力すれば、チェックイン終了します---");
 				
 				for(;;) {
 					String input = scl.nextLine(); //接收入住信息的输入
 					String[] input_array = input.split(":"); //冒号分割
 					
-					if("exit".equals(input)) {
+					if("チェックイン終了".equals(input)) { //改进 跟功能选择退出区分
 						System.out.println("---チェックイン終了---");
 						break;
 					}
@@ -207,12 +208,13 @@ public class Presentation {
 				int room_number = Integer.valueOf(input_reserve);
 				
 				System.out.println("個人情報を入力してください");
+				System.out.println("---「入力終了」を入力すれば、予約終了します---");
 				for(;;) {
 					String input = scl.nextLine(); //接收入住信息的输入
 					String[] input_array = input.split(":"); //冒号分割
 					
-					if("exit".equals(input)) {
-						System.out.println("---------");
+					if("入力終了".equals(input)) { //改进 区别退出
+						System.out.println("----予約終了-----");
 						break;
 					}
 					
