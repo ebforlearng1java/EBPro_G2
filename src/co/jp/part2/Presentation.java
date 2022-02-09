@@ -40,7 +40,7 @@ public class Presentation {
 					String input = scl.nextLine(); //输入入住信息
 					String[] input_array = input.split(":"); //冒号分割
 					
-					if("exit".equals(input)) {
+					if("check in exit".equals(input)) {
 						System.out.println("---チェックイン終了---");
 						break;
 					}
@@ -158,7 +158,7 @@ public class Presentation {
 					String input = scl.nextLine(); //输入入住信息
 					String[] input_array = input.split(":"); //冒号分割
 					
-					if("exit".equals(input)) {
+					if("booking exit".equals(input)) {
 						System.out.println("---------");
 						break;
 					}
