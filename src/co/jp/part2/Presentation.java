@@ -55,7 +55,17 @@ public class Presentation {
 						case "3":
 							System.out.println("请选择您要进行锻炼的项目：1：花样游泳　　2：马拉松　　3：天空盘旋");
 							String activity =scl.nextLine();
-							exercise(pet,activity);
+							System.out.println("默认锻炼1小时，如果需要多锻炼一会，请输入您希望锻炼的小时数：");
+							String timeString =scl.nextLine();
+							Integer time;
+							try {
+						        time = Integer.parseInt(timeString);
+						        exercise(pet,activity,time);
+						    } catch (NumberFormatException e) {
+						    	System.out.println("输入错误！默认锻炼1小时");
+						    	System.out.println();
+						    	exercise(pet,activity);
+						    }
 							break;
 						case "4":
 							break loop;
@@ -102,7 +112,7 @@ public class Presentation {
 					case"3":
 						break loop;
 					default:
-						System.out.println("输入错误，请重新输入");
+						System.out.println("没有输入具体的小时数，默认锻炼1小时");
 						break;
 				}
 			}
@@ -214,9 +224,10 @@ public class Presentation {
 		}
 	}
 	
-	private static void exercise(Pet pet,String activity) {
+	private static boolean exercise(Pet pet,String activity) {
 		if(pet.power<3) {
 			System.out.println("赶快去吃点东西吧，不然没有力气锻炼身体。");
+			return false;
 		}else {
 			switch(activity) {
 				case"1":
@@ -228,6 +239,7 @@ public class Presentation {
 					}else {
 						pet.power = pet.power-10;
 						System.out.println("您必须在水中活动，上岸后损失10点能量。");
+						return false;
 					}
 					break;
 				case"3":
@@ -236,13 +248,33 @@ public class Presentation {
 					}else {
 						pet.power = pet.power-10;
 						System.out.println("只有天空动物才能飞翔，您跌落损失10点能量。");
+						return false;
 					}
 					break;
 			}
 			pet.grow();
 			System.out.println();
-			
+			return true;
 		}
 	}
+	
+	//新增加了overload方法 可以选择锻炼的时间
+	private static void exercise(Pet pet,String activity,int hour) {
+		for(int i= 0;i<hour;i++) {
+			System.out.println("==============");
+			System.out.println("开始第"+(i+1)+"个小时的锻炼锻炼！");
+			boolean result=	exercise(pet,activity);
+			if(!result) {
+				System.out.println("啊呀呀，能量不足，没有完成原计划"+hour+"小时的运动。");
+				System.out.println();
+				return;
+			}
+		}
+		System.out.println("恭喜你，大汗淋漓地完成了"+hour+"小时的运动。");
+		System.out.println();
+		
+	}
+	
 
+	
 }
