@@ -2,49 +2,39 @@ package co.jp.part2;
 
 public class Bird extends Pet implements Fly {
 
-	@Override
-	void eat() {
-		// TODO 自動生成されたメソッド・スタブ
-		  System.out.println("小鸟吃东西");
-		   
+	   private static final String TYPE = "小鸟";
 
-	}
-	
-	
-	
-	public Bird(String name, int age, String type) {
-		super();
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
+	    public Bird(String name, int age) {
+	        super(name, age, TYPE);
+	    }
 
-	private int countBird=0;
-	
+	    public Bird() {
+			// TODO 自動生成されたコンストラクター・スタブ
+		}
 
-	public int getCount() {
-		return countBird;
-	}
+		@Override
+	    public void fly() {
+	        System.out.printf("小鸟[%s]在飞\n", getName());
+	    }
 
-	public void setCount(int count) {
-		this.countBird = count;
-	}
+	    @Override
+	    public void eat() {
+	        System.out.printf("小鸟[%s]在吃\n", getName());
+	    }
+	    
 
 
 	
-	public void printInfo() {
-		countBird++;
-		System.out.println("小鸟的名字是：" + this.name + "小鸟的年龄是：" + this.age + "小鸟的类型是：" +this.type);
-		System.out.println("小鸟的数量是：" + this.countBird);;
-		
-    }
+//	public void printInfo() {
+//		countBird++;
+//		System.out.println("小鸟的名字是：" + this.name + "小鸟的年龄是：" + this.age + "小鸟的类型是：" +this.type);
+//		System.out.println("小鸟的数量是：" + this.countBird);;
+//		
+//    }
 
 
 
-	@Override
-	public void fly() {
-		// TODO 自動生成されたメソッド・スタブ
-		System.out.println("出门遛鸟");
-	}
-	
+
 }
 
 

@@ -2,58 +2,45 @@ package co.jp.part2;
 
 public class Room {
 
-	/*
-    房间编号：
-    一楼：101 102 103 104 105  ...
-    二楼：201 202 203 204 205  ...
-    .......
-*/
-private int no;
+	 private Pet pet;
+	    private final String roomNo;
+	    private boolean idle; //true-空闲; false-占用
 
-/*
-   true表示房间空闲，可以预定。
-   false表示房间占用，不能预定。
-*/
+	    public Room(String roomNo) {
+	        this.pet = null;
+	        this.roomNo = roomNo;
+	        this.idle = true;
+	    }
 
-private boolean status;
+	    
+	    public Pet getPet() {
+	        return pet;
+	    }
 
-Pet pet ;
-public Pet getPet() {
-	return pet;
-}
+	    public String getRoomNo() {
+	        return roomNo;
+	    }
 
-public void setPet(Pet pet) {
-	this.pet = pet;
-}
+	    public boolean isIdle() {
+	        return idle;
+	    }
 
-public Room() {
-	
-}
+	    public void printInfo() {
+	        if (idle) {
+	            System.out.printf("========= 当前房号[%s], 状态空闲\n", roomNo);
+	        } else {
+	            System.out.printf("========= 当前房号[%s], 状态占用, 住户名称[%s]\n", roomNo, pet.getName());
+	        }
+	    }
 
-public Room(int no,boolean status) {
-   this.no = no;
-   this.status = status;
-}
+	    public void checkIn(Pet pet) {
+	        this.pet = pet;
+	        this.idle = false;
+	    }
 
-//setget
-public int getNo() {
-   return no;
-}
-
-public void setNo(int no) {
-   this.no = no;
-}
-
-public boolean isStatus() {
-   return status;
-}
-
-public void setStatus(boolean status) {
-   this.status = status;
-}
-
-public String toString() {
-   return "Room{" + no + "," + (status ? "空闲" : "占用") + " }";
-}
+	    public void checkOut() {
+	        this.pet = null;
+	        this.idle = true;
+	    }
 
 }
