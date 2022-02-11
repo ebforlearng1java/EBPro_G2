@@ -74,7 +74,7 @@ public class JavachapterHomeWork09 {
 				}
 				}
 				
-		 * 解答：本文件中(72-77)
+		 * 解答：本文件中(68-73)
 		 *      原PDF中(4-9)
 		 * 
 		 */
