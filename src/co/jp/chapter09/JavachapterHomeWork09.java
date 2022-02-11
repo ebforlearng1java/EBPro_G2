@@ -53,7 +53,7 @@ public class JavachapterHomeWork09 {
 		   	      
 					   	      ActionListener btn = new ActionListener() {
 					   	      
-					   	        public void actionperformed(ActionEvent e) {
+					   	        public void actionPerformed(ActionEvent e) {
 					   	        
 					   	           System.out.println("ボタンクリックしました。");
 					   	     
