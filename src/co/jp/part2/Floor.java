@@ -5,7 +5,7 @@ public class Floor {
 	    private final int roomCount;
 	    private final Room[] rooms;
 
-	    public Floor(String floorNo, int roomCount) {
+	    public Floor(String floorNo, int roomCount) { //建立楼层和房间号
 	        this.floorNo = floorNo;
 	        this.roomCount = roomCount;
 	        this.rooms = new Room[roomCount];
@@ -18,7 +18,7 @@ public class Floor {
 	        return rooms;
 	    }
 
-	    public void printInfo() {
+	    public void printInfo() { //打印房间信息
 	        System.out.printf("====== 当前楼号[%s], 共有房间数[%d]\n", floorNo, roomCount);
 	        for (Room room : rooms) {
 	            room.printInfo();

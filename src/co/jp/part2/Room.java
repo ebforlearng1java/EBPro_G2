@@ -42,5 +42,7 @@ public class Room {
 	        this.pet = null;
 	        this.idle = true;
 	    }
+	    
+	    
 
 }

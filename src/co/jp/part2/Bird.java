@@ -2,7 +2,7 @@ package co.jp.part2;
 
 public class Bird extends Pet implements Fly {
 
-	   private static final String TYPE = "小鸟";
+	   private static final String TYPE = "BIRD";
 
 	    public Bird(String name, int age) {
 	        super(name, age, TYPE);

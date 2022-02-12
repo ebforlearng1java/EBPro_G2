@@ -18,7 +18,7 @@ public class Hotel {
 		this.floorCount = floorCount;
 		this.floors = new Floor[floorCount];
 		this.roomMap = new LinkedHashMap<>();
-		
+
 		for (int i = 0; i < floorCount; i++) {
 			this.floors[i] = new Floor(i + 1 + "", roomCountPerFloor);
 			for (Room room : this.floors[i].getRooms()) {
@@ -40,7 +40,7 @@ public class Hotel {
 	/**
 	 * 入住酒店
 	 */
-	
+
 	public void checkIn() {
 		// 提示语
 		System.out.println("欢迎入住本酒店!");
@@ -58,7 +58,7 @@ public class Hotel {
 			System.out.println("对不起，没有空闲的房间了!");
 			return;
 		}
-		System.out.println("空闲房间有: "); //打印空闲的房间
+		System.out.println("空闲房间有: "); // 打印空闲的房间
 		for (String roomNo : idleRoomNoSet) {
 			System.out.println(roomNo);
 		}
@@ -122,19 +122,18 @@ public class Hotel {
 	/**
 	 * 退房
 	 */
-	
 	public void checkOut() {
 		Room occupyRoom;
 		System.out.print("请输入需要退房的房号: ");
 		while (true) {
 			String roomNo = scanner.next();
-			if (!roomMap.containsKey(roomNo)) { //map工具查找空房
+			if (!roomMap.containsKey(roomNo)) { // map工具查找空房
 				System.out.print("房间号输入错误，请重新输入: ");
 				continue;
 			}
 			Room room = roomMap.get(roomNo);
 			if (room.isIdle()) {
-				System.out.print("当前房间空闲，不需要退房，请重新输入(0-继续, 其他-退出): ");
+				System.out.print("当前房间空闲，不需要退房，请重新输入(0-继续, 其他数字-退出): ");
 				int ind = scanner.nextInt();
 				if (ind == 0) {
 					System.out.print("请输入需要退房的房号: ");
@@ -147,62 +146,85 @@ public class Hotel {
 		}
 
 		occupyRoom.checkOut();
-		System.out.println("退房成功!");
+		System.out.println(occupyRoom.getRoomNo() + "退房成功!" );
 
 	}
 
-// 喂食机能
+	/**
+	 * 喂食
+	 * 
+	 */
+
 	public void eat() {
 
-		int i;
-		String s;
-		// room NO
-		System.out.println("请选择服务内容: 1.喂鸟  2.喂猫  3.喂狗  0.退出");
-		System.out.println("---------------------------------------------------------");
-        
-		Pet pet;
-		Scanner scanner = new Scanner(System.in);
-		loop: while (true) {
-			System.out.println("选项：(提示:选项0可以回到前台)");
-			i = scanner.nextInt();
-			switch (i) {
+		Room targetRoom;
+        System.out.print("请输入需要喂食的房号: ");
+        while (true) {
+            String roomNo = scanner.next();
+            if (!roomMap.containsKey(roomNo)) {
+                System.out.print("房间号输入错误，请重新输入: ");
+                continue;
+            }
+            Room room = roomMap.get(roomNo);
+            if (room.isIdle()) {
+                System.out.print("当前房间没有宠物，请重新输入(0-重输房号, 其他数字-返回酒店服务前台): ");
+                int ind = scanner.nextInt();
+                if (ind == 0) {
+                    System.out.print("请输入需要喂食的房号: ");
+                    continue;
+                }
+                return;
+            }
+            targetRoom = room;
+            break;
+        }
 
-			case 0:
-				System.out.println("\t确定要退出喂食吗(y/n)");
-				s = scanner.next();
-				if (s.equalsIgnoreCase("y")) {
-					System.out.println("\t退出喂食");
-
-					break loop;
-				} else {
-					break;
-				}
-
-			case 1: // Bird
-				Pet bird = new Bird(); // 如何实现调用以及分歧
-				bird.eat();
-				break;
-
-			case 2: // Cat
-				Pet cat = new Cat();
-				cat.eat();
-				break;
-
-			case 3:// Dog
-			    Pet dog = new Dog();
-				dog.eat();
-				break;
-
-			default:
-				System.out.println("\t请输入其他正确选项");
-				break;
-
-			}
-			
-
-
-		}
-
-	}
+        targetRoom.getPet().eat();
+        System.out.println("喂食成功!");
+    }
 
 }
+//		int i;
+//		String s;
+//		// room NO
+//		System.out.println("请输入需要服务的房间号: ");
+//		System.out.println("请服务内容: 1.喂鸟  2.喂猫  3.喂狗  0.退出");//根据房间号喂食
+//		System.out.println("---------------------------------------------------------");
+//
+//		Pet pet;
+//		Scanner scanner = new Scanner(System.in);
+//		loop: while (true) {
+//			System.out.println("选项：(提示:选项0可以回到前台)");
+//			i = scanner.nextInt();
+//			switch (i) {
+//
+//			case 0:
+//				System.out.println("\t确定要退出喂食吗(y/n)");
+//				s = scanner.next();
+//				if (s.equalsIgnoreCase("y")) {
+//					System.out.println("\t退出喂食");
+//
+//					break loop;
+//				} else {
+//					break;
+//				}
+//
+//			case 1: // Bird 从房间拿pet 
+//				Pet bird = new Bird(); // 如何实现调用以及分歧
+//				bird.eat();
+//				break;
+//
+//			case 2: // Cat
+//				Pet cat = new Cat();
+//				cat.eat();
+//				break;
+//
+//			case 3:// Dog
+//				Pet dog = new Dog();
+//				dog.eat();
+//				break;
+//
+//			default:
+//				System.out.println("\t请输入其他正确选项");
+//				break;
+//

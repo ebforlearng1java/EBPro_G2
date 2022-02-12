@@ -2,7 +2,7 @@ package co.jp.part2;
 
 public class Cat extends Pet implements Run {
 
-    private static final String TYPE = "小猫";
+    private static final String TYPE = "CAT";
 
     public Cat(String name, int age) {
         super(name, age, TYPE);

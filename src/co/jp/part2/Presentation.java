@@ -8,43 +8,42 @@ public class Presentation {
 
 		Scanner scanner = new Scanner(System.in);
 
-        Hotel hotel = new Hotel(scanner, 2, 5);
+		Hotel hotel = new Hotel(scanner, 2, 5);
 
-        System.out.println("欢迎来到酒店管理系统，请在使用前阅读以下说明");
-        System.out.println("本店提供服务：[1]查看房间状态，[2]订房，[3]退房，[4]喂食，[0]退出系统");
+		System.out.println("欢迎来到酒店管理系统，请在使用前阅读以下说明");
+		System.out.println("本店提供服务：[1]查看房间状态，[2]订房，[3]退房，[4]喂食，[0]退出系统");
 
-        while (true) {
-            System.out.print("\n请输入指令: ");
-            int ind = scanner.nextInt();
-            switch (ind) {
-                case 0: {
-                    System.out.println("欢迎下次光临!");
-                    System.exit(0);
-                }
-                //查看房间状态
-                case 1: {
-                    hotel.printInfo();
-                    break;
-                }
-                //订房输入宠物信息
-                case 2: {
-                    hotel.checkIn();
-                    break;
-                }
-                //退房
-                case 3: {
-                    hotel.checkOut();
-                    break;
-                }
-                //喂食
-                case 4: {
-                    hotel.eat();
-                    break;
-                }
-            }
-        }
-    }
-        
+		while (true) {
+			System.out.print("\n这里是酒店前台,请输入指令: ");
+			int ind = scanner.nextInt();
+			switch (ind) {
+			case 0: {
+				System.out.println("欢迎下次光临!");
+				System.exit(0);
+			}
+			// 查看房间状态
+			case 1: {
+				hotel.printInfo();// 完善注释 方法名(日文) 作者 时间 引数 output
+				break;
+			}
+			// 订房输入宠物信息
+			case 2: {
+				hotel.checkIn();
+				break;
+			}
+			// 退房
+			case 3: {
+				hotel.checkOut();
+				break;
+			}
+			// 喂食
+			case 4: {
+				hotel.eat();
+				break;
+			}
+			}
+
+		}
+
 	}
-
-
+}
