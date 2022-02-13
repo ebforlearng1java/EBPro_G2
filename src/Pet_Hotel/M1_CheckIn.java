@@ -10,11 +10,10 @@ public class M1_CheckIn{
 		Scanner scl = new Scanner(System.in);
 		String roomNo = "null";
 		for(;;) {
-			System.out.println("\n************************** 入住登录 **************************");
-			System.out.println("请选择房间的种类\n");
+			System.out.println("************************** 入住登录 **************************");
+			System.out.println("\n请选择房间的种类：");
 			System.out.println("1.水缸房");
 			System.out.println("2.栅栏房");
-			
 			System.out.println("\n3.返回主菜单\n");
 			System.out.println("***********************************************************");	
 			System.out.println("请输入序号：");
@@ -40,6 +39,13 @@ public class M1_CheckIn{
 			if (room_type.equals("1") || room_type.equals("2")) {
 				if (roomNo.equals("很抱歉，目前没有相应空房。")) {
 					System.out.println(roomNo);
+					if(room_type.equals("1")) {
+						System.out.printf("预计在%s天后有空房，欢迎下次光临。", Room.after_a);
+					}
+					else{
+						System.out.printf("预计在%s天后有空房，欢迎下次光临。", Room.after_t);
+					}
+
 					System.out.println("\n返回主菜单中，请稍后...\n");
 					System.out.println("--------------------------------------------------------------");
 					room_type = "3";
@@ -91,8 +97,8 @@ public class M1_CheckIn{
 				System.out.printf("房间类型：2.栅栏房\n");
 			}
 			System.out.printf("房间号：%s\n", guest[4]);
-			System.out.printf("内含餐点：%s\n", "xxx");
 			System.out.printf("添加服务：%s\n", guest[6]);
+			
 			System.out.println("--------------------------------------------------------------");	
 			
 			System.out.println("是否入住？");
@@ -105,11 +111,10 @@ public class M1_CheckIn{
 			case "1":
 				System.out.println("\n**************************************************************");
 				System.out.println("感谢您爱宠的入住!\n");
+				
 				Room.checkin(guest);
 				System.out.println("--------------------------------------------------------------");	
 				break;
-				
-				
 			case "2":
 				System.out.println("欢迎下次光临，返回主菜单中...\n");
 				break;
@@ -124,16 +129,14 @@ public class M1_CheckIn{
 			if (sub_in2.equals("1") || sub_in2.equals("2")) {
 				break;
 			}
-
 		}
 	return guest;
 	}
 	
-	public static void checkIn_main() {
+	public static void main() {
 		String[] guest = checkIn_menu();
 		if(guest[0].equals("3")) {
 			return;
 		}
 	}
-	
 }
