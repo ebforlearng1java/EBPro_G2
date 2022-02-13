@@ -14,7 +14,8 @@ public class Presentation {
 		System.out.println("3. 退房");
 		System.out.println("4. 喂食");
 		System.out.println("5. 预约");
-		System.out.println("6. 退出");
+		System.out.println("6. 查看信息");
+		System.out.println("7. 退出");
 
 		String name = "";
 		int age = 0;
@@ -26,7 +27,7 @@ public class Presentation {
 		for (;;) {
 			String input = sc1.nextLine();
 
-			if ("6".equals(input)) {
+			if ("7".equals(input)) {
 				System.out.println("欢迎使用，下次再见");
 				break;
 			}
@@ -150,19 +151,35 @@ public class Presentation {
 						guest.name = bookname;
 				System.out.println("请选择您要预约的房间：");
 				int num = sc1.nextInt();
-				if (num < 9) {
+				if (num < 10) {
 					if (room[num] == null) {
-						
 						room[num] = guest;
 						System.out.println("您已预约成功");
 						System.out.println("房间号为："+num);
 					} 
 					else {
-						System.out.println("输入房间不正确，请重新输入");
+						System.out.println("输入房间不可用，请重新选择");
 					}
 				}
+			}
+			
+			if ("6".equals(input)) {
+				System.out.println("请输入房间号");
+				int num = sc1.nextInt();
+				if(num>9) {
+					System.out.println("输入房间号不正确，请重新输入");
+					}else if(room[num]==null) {
+						System.out.println("房间并未被入住，请重新输入");
+					}else {
+					System.out.println("名字是："+room[num].name);
+					System.out.println("年龄是："+room[num].age);
+					System.out.println("类型是："+room[num].type);
+					}
+				
+				}
+					
 			}
 
 		}
 	}
-}
+
