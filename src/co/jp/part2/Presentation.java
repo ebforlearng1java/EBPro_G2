@@ -11,6 +11,7 @@ public class Presentation {
 		String name = "";
 		int age = 0;
 		String type = "";
+		int sum = 0;//初始钱包金额为0
 
 		Scanner scl = new Scanner(System.in);
 
@@ -24,14 +25,16 @@ public class Presentation {
 			System.out.println("1 -----------办理入住-----------");
 			System.out.println("2 -----------办理退房-----------");
 			System.out.println("3 -----------查询空房-----------");
-			System.out.println("4 -----------钱包充值-----------(待完善)");
+//			System.out.println("4 -----------钱包充值-----------(待完善)");
 			System.out.println("0 -----------退出系统-----------");
 			System.out.println("☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆");
 
 			System.out.println("请选择目录:");
 			String menu = scl.nextLine();
 
-			// 办理入住
+			/**
+			 *	办理入住
+			*/
 			if ("1".equals(menu)) {
 
 				System.out.println();
@@ -133,7 +136,9 @@ public class Presentation {
 
 				}
 			}
-			
+			/**
+			 *	退房
+			*/
 			if("2".equals(menu)) {
 				System.out.println("请输入房间号\n房间号:");
 				String input_name = scl.nextLine();
@@ -143,7 +148,9 @@ public class Presentation {
 				System.out.println("退房成功");				
 			}
 			
-			// 查询空房
+			/**
+			 *	查询空房
+			*/
 			if ("3".equals(menu)) {
 				System.out.println();
 				int room = 0;
@@ -166,39 +173,46 @@ public class Presentation {
 				}
 				continue loop;
 			}
-			
-			//充值
-			if("4".equals(menu)) {
-				int sum = 0;
-				int remain = 0;
-
-				// 充值循环
-				chargeLoop: for (;;) {
-					System.out.println("请输入充值金额:");					
-					String c = scl.nextLine();
-					int charge = Integer.valueOf(c);// 充值为charge的金额
-					
-					System.out.println("充值金额是否为:" + charge + "？ YES or NO");
-					String answer = scl.nextLine();
-					if ("YES".equals(answer)) {
-						remain = moneyCharge(charge);
-						sum = sum + remain;
-						System.out.println("现在您的余额为:" + sum + "元");
-						System.out.println("继续充值选择continue, 返回主菜单选择back");
-						String choose = scl.nextLine();
-						if ("back".equals(choose)) {
-							continue loop;
-						}
-						if ("continue".equals(choose)) {
-						} else {
-							System.out.println("输入格式错误");
-						}
-					} else {
-						System.out.println("请重新输入");
-					}
-					continue loop;
-				}
-			}
+			/**
+			 *	充值
+			*/
+//			if("4".equals(menu)) {
+//				System.out.println("请输入需要充值的房间:");	
+//				String input_room = scl.nextLine();
+//				int room = Integer.valueOf(input_room);
+//				room = room - 101;
+//				
+//				
+//				// 充值循环
+//				chargeLoop: for (;;) {
+//					System.out.println("请输入充值金额:");					
+//					String c = scl.nextLine();
+//					int charge = Integer.valueOf(c);// 充值为charge的金额
+//					
+//					System.out.println("充值金额是否为:" + charge + "？ YES or NO");
+//					String answer = scl.nextLine();
+//					if ("YES".equals(answer)) {
+//						System.out.println("充值:" + charge);
+//						int remain = 0;
+//						remain = remain + charge;
+//						sum = sum + remain;
+//						System.out.println("现在您的余额为:" + sum + "元");
+//						System.out.println("继续充值选择continue, 返回主菜单选择back");
+//						String choose = scl.nextLine();
+//						if ("back".equals(choose)) {
+//							// 
+//							continue loop;
+//						}
+//						if ("continue".equals(choose)) {
+//						} else {
+//							System.out.println("输入格式错误");
+//						}
+//					} else {
+//						System.out.println("请重新输入");
+//					}
+//					
+//				}
+//			}
 			
 			// 0退出系统
 			if ("0".equals(menu)) {
@@ -208,7 +222,8 @@ public class Presentation {
 		}
 	}
 	
-	//充值功能
+	/*
+	 * 充值功能
 	public static int moneyCharge(int charge) {
 		int remain = 0;
 		System.out.println("充值:" + charge);
@@ -216,4 +231,5 @@ public class Presentation {
 
 		return remain;
 	}
+	*/
 }
