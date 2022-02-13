@@ -65,6 +65,7 @@ public class Presentation {
 						Cat cat = new Cat();
 						cat.name = name;
 						cat.age = age;
+						cat.type = "猫";
 						for (int i = 0; i < room.length; i++) {
 							if (room[i] == null) {
 								room[i] = cat;
@@ -80,6 +81,7 @@ public class Presentation {
 						Dog dog = new Dog();
 						dog.name = name;
 						dog.age = age;
+						dog.type = "狗";
 						for (int i = 0; i < room.length; i++) {
 							if (room[i] == null) {
 								room[i] = dog;
@@ -95,6 +97,7 @@ public class Presentation {
 						Bird bird = new Bird();
 						bird.name = name;
 						bird.age = age;
+						bird.type = "鸟";
 						for (int i = 0; i < room.length; i++) {
 							if (room[i] == null) {
 								room[i] = bird;
@@ -113,7 +116,7 @@ public class Presentation {
 				System.out.println("请选择房间号：");
 				Scanner sc = new Scanner(System.in);
 				int num = sc.nextInt();
-				if (num < 9) {
+				if (num < 10) {
 					if (room[num] == null) {
 						System.out.println("房间为空房，不需要退房");
 					} else {
@@ -130,9 +133,9 @@ public class Presentation {
 				System.out.println("您已选择喂食");
 				System.out.println("请选择房间");
 				int eatnum = sc1.nextInt();
-				if (eatnum < 9) {
+				if (eatnum < 10) {
 					room[eatnum].eat();
-					System.out.println(room[eatnum]+"喂食成功");
+					System.out.println(room[eatnum].name+"吃的很饱");
 				} else {
 					System.out.println("输入房间不正确，请重新输入");
 				}

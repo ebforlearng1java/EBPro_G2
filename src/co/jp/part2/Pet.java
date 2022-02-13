@@ -5,7 +5,6 @@ public class Pet {
 	String name ="";
 	int age =0;
 	String type= "";
-	Pet[] room = new Pet[10];
 
 	//调取宠物信息方法
 	public void getname() {
@@ -18,7 +17,7 @@ public class Pet {
 
 	public void eat() {
 		// TODO 自動生成されたメソッド・スタブ
-		
+		System.out.println("喂食成功");
 	}
 	
 	
