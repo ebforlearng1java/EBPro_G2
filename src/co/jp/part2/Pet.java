@@ -1,22 +1,25 @@
 package co.jp.part2;
 
-public abstract class Pet {
+public class Pet {
 
+	String name ="";
+	int age =0;
+	String type= "";
+	Pet[] room = new Pet[10];
+
+	//调取宠物信息方法
+	public void getname() {
+		this.name = name;
+	}
 	
-	String name;
-	
-	int age;
-	
-	String type;
-	
-	
-	static int COUNT = 0;
-	
-	abstract void eat();
-	
-	
-	
-	
+	public int getage() {
+		return age;
+	}
+
+	public void eat() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
 	
 	
 }

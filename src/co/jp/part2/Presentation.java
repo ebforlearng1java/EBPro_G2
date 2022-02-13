@@ -4,144 +4,162 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Presentation {
-		
-	 public static void main(String[] args) {
-		 
-		System.out.println("-----PETHOTEL-----");
 
-		Pet[] hotel = new Pet[10];
-		
-		String name="";
-		
-		int age=0;
-		
-		String type="";
-	
-		 Scanner sc = new Scanner(System.in);
-	        String[][] room = new String[2][5];
-	        init(room);//åˆå§‹åŒ–é…’åº—æˆ¿é—´
-	        System.out.print("æç¤º:");
-	        while (true) {
-	            System.out.println("è¾“å…¥search æŸ¥è¯¢æ‰€æœ‰æˆ¿é—´ï¼›è¾“å…¥ in åŠç†å…¥ä½ï¼› è¾“å…¥out åŠç†é€€æˆ¿ï¼› è¾“å…¥exit å…³é—­ç³»ç»Ÿ");
-	            System.out.print("è¯·è¾“å…¥æŒ‡ä»¤:");
-	            String order = sc.next();
-	            if (order.equals("search")) {
-	                System.out.println("æŸ¥è¯¢æ‰€æœ‰æˆ¿é—´");
-	                search(room);
-	            } else if (order.equals("in")) {
-	                System.out.println("åŠç†å…¥ä½");
-	                in(room);
-	                  } else if (order.equals("out")) {
-	                System.out.println("åŠç†é€€æˆ¿");
-	                out(room);
-	            } else if (order.equals("quit")) {
-	                System.out.println("å…³é—­ç³»ç»Ÿ");
-	                break;
-	            } else {
-	                System.out.println("è¯·è¾“å…¥æ­£ç¡®çš„æŒ‡ä»¤!");
-	            }
-	        }
-	    }
+	public static void main(String[] args) {
 
-	//æˆ¿é—´åˆå§‹çŠ¶æ€çš„æ–¹æ³•
-	public static void init(String[][] room) {
-	  for (int i = 0; i < room.length; i++) {
-	      for (int j = 0; j < room[i].length; j++) {
-	          room[i][j] = "Empty";
-	      }
-	  }
-	  System.out.println("æˆ¿é—´åˆå§‹åŒ–æˆåŠŸï¼");
+		System.out.println("welcome to PetHotel");
+		System.out.println("ÇëÑ¡ÔñÄúĞèÒªµÄ·şÎñÖÖÀà£º");
+		System.out.println("1. ²éÑ¯¿Õ·¿");
+		System.out.println("2. Èë×¡");
+		System.out.println("3. ÍË·¿");
+		System.out.println("4. Î¹Ê³");
+		System.out.println("5. Ô¤Ô¼");
+		System.out.println("6. ÍË³ö");
+
+		String name = "";
+		int age = 0;
+		String type = "";
+		Pet[] room = new Pet[10];
+
+		Scanner sc1 = new Scanner(System.in);
+
+		for (;;) {
+			String input = sc1.nextLine();
+
+			if ("6".equals(input)) {
+				System.out.println("»¶Ó­Ê¹ÓÃ£¬ÏÂ´ÎÔÙ¼û");
+				break;
+			}
+
+			if ("1".equals(input)) {
+				System.out.println("¿Õ·¿ÏÔÊ¾ÈçÏÂ£º");
+				for (int i = 0; i < room.length; i++) {
+					if (room[i] == null) {
+						System.out.println("room" + i + ":" + room[i]);
+					}
+				}
+			}
+
+			if ("2".equals(input)) {
+				System.out.println("ÄúÒÑÑ¡ÔñÈë×¡");
+				System.out.println("ÇëÊäÈë³èÎïÈë×¡ĞÅÏ¢");
+
+				for (;;) {
+					System.out.println("ÇëÊäÈë³èÎïĞÕÃû£º");
+					String input1 = sc1.nextLine();
+					name = input1;
+
+					
+					System.out.println("ÇëÊäÈë³èÎïÄêÁä£º");
+					String input2 = sc1.nextLine();
+					Integer a = Integer.valueOf(input2);
+					age = a;
+
+					System.out.println("ÇëÊäÈë³èÎïÖÖÀà£º");
+					System.out.println("a.Ã¨  b.¹·  c.Äñ");
+					System.out.println("Àı£ºÈç¹ûÆ·ÖÖÎªÃ¨£¬ÔòÊäÈëa");
+					String type_input = sc1.nextLine();
+					type = type_input;
+
+					if ("a".equals(type_input)) {
+						Cat cat = new Cat();
+						cat.name = name;
+						cat.age = age;
+						for (int i = 0; i < room.length; i++) {
+							if (room[i] == null) {
+								room[i] = cat;
+								System.out.println("ÄúÒÑÈë×¡³É¹¦");
+								System.out.println("·¿¼äºÅÎª:" + i);
+								break;
+							}
+						}
+						break;
+					}
+
+					if ("b".equals(type_input)) {
+						Dog dog = new Dog();
+						dog.name = name;
+						dog.age = age;
+						for (int i = 0; i < room.length; i++) {
+							if (room[i] == null) {
+								room[i] = dog;
+								System.out.println("ÄúÒÑÈë×¡³É¹¦");
+								System.out.println("·¿¼äºÅÎª:" + i);
+								break;
+							}
+						}
+						break;
+					}
+
+					if ("c".equals(type_input)) {
+						Bird bird = new Bird();
+						bird.name = name;
+						bird.age = age;
+						for (int i = 0; i < room.length; i++) {
+							if (room[i] == null) {
+								room[i] = bird;
+								System.out.println("ÄúÒÑÈë×¡³É¹¦");
+								System.out.println("·¿¼äºÅÎª:" + i);
+								break;
+							}
+						}
+					}
+					break;
+				}
+			}
+
+			if ("3".equals(input)) {
+				System.out.println("ÒÑÑ¡ÔñÍË·¿£º");
+				System.out.println("ÇëÑ¡Ôñ·¿¼äºÅ£º");
+				Scanner sc = new Scanner(System.in);
+				int num = sc.nextInt();
+				if (num < 9) {
+					if (room[num] == null) {
+						System.out.println("·¿¼äÎª¿Õ·¿£¬²»ĞèÒªÍË·¿");
+					} else {
+						room[num] = null;
+						System.out.println("¹§Ï²ÄúÍË·¿³É¹¦£¬»¶Ó­ÏÂ´ÎÔÙÀ´");
+					}
+				} else {
+					System.out.println("ÄãÊäÈëµÄ·¿¼äºÅÓĞÎó£¬ÇëÖØĞÂÊäÈë£¡");
+				}
+				
+			}
+			
+			if ("4".equals(input)) {
+				System.out.println("ÄúÒÑÑ¡ÔñÎ¹Ê³");
+				System.out.println("ÇëÑ¡Ôñ·¿¼ä");
+				int eatnum = sc1.nextInt();
+				if (eatnum < 9) {
+					room[eatnum].eat();
+					System.out.println(room[eatnum]+"Î¹Ê³³É¹¦");
+				} else {
+					System.out.println("ÊäÈë·¿¼ä²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë");
+				}
+				
+			}
+			
+			if ("5".equals(input)) {
+				System.out.println("ÄúÒÑÑ¡ÔñÔ¤Ô¼");
+				System.out.println("ÇëÊäÈë³èÎïĞÕÃû£º");
+						String bookname = sc1.nextLine();
+						Pet guest = new Pet();
+						guest.name = bookname;
+				System.out.println("ÇëÑ¡ÔñÄúÒªÔ¤Ô¼µÄ·¿¼ä£º");
+				int num = sc1.nextInt();
+				if (num < 9) {
+					if (room[num] == null) {
+						
+						room[num] = guest;
+						System.out.println("ÄúÒÑÔ¤Ô¼³É¹¦");
+						System.out.println("·¿¼äºÅÎª£º"+num);
+					} 
+					else {
+						System.out.println("ÊäÈë·¿¼ä²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë");
+					}
+				}
+			}
+
+		}
 	}
-
-	//æŸ¥è¯¢æ‰€æœ‰æˆ¿é—´çš„æ–¹æ³•
-	public static void search(String[][] room) {
-
-	  for (int i = 0; i < room.length; i++) {
-	      System.out.print("ç¬¬" + (i + 1) + "æ¥¼:   ");
-	      for (int j = 0; j < room[i].length; j++) {
-	          if (i < 2) {
-	              System.out.print("0");
-	          }
-	          int floor = (i + 1) * 100 + j + 1;
-	          System.out.print(floor + "\t");
-	      }
-	      System.out.println();
-	      //æ‰“å°æˆ¿é—´çŠ¶æ€
-	      for (int k = 0; k < room[i].length; k++) {
-	          System.out.print("\t" + room[i][k]);
-	      }
-	      System.out.println();
-	  }
-
-	}
-
-	//å…¥ä½æ–¹æ³•
-	public static void in(String[][] room) {
-	  boolean flag = true;
-	  System.out.print("è¯·è¾“å…¥å® ç‰©å“ç§åŠå§“åï¼š");
-	  System.out.print("ä¾‹å¦‚ï¼šdogabc");
-	  Scanner sc = new Scanner(System.in);
-	  String name = sc.next();
-	  
-	  
-	  while (flag) {//å½“è¾“å…¥çš„æˆ¿é—´æœ‰äººä½æ—¶ï¼Œç»§ç»­å¾ªç¯è¾“å…¥æˆ¿é—´ï¼Œç›´åˆ°é€‰æ‹©ä¸€é—´æ²¡æœ‰ä½çš„æˆ¿é—´
-	      System.out.print("è¯·è¾“å…¥å…¥ä½çš„æˆ¿é—´å·ï¼Œä¾‹å¦‚203ï¼š");
-	      int rnum = sc.nextInt();
-	      int floor = rnum / 100 - 1;//æ¥¼å±‚å·
-	      int no = rnum % 100 - 1;//æˆ¿é—´å·
-	      if (floor >= 0 && floor <= 2 && no >= 0 && no <= 5) {//åˆ¤æ–­è¾“å…¥çš„æˆ¿é—´å·æ˜¯å¦æ­£ç¡®
-	          if (room[floor][no].equals("Empty")) {//åˆ¤æ–­æˆ¿é—´æ˜¯å¦ç©ºçš„ï¼Œå¦‚æœç©ºçš„ï¼Œåˆ™å…¥ä½ï¼ŒæŠŠå…¥ä½çš„åæˆ¿é—´çŠ¶æ€æ”¹ä¸ºå…¥ä½äººå§“åï¼Œç„¶åç»“æŸ            
-	                                                 //å¾ªç¯
-	              room[floor][no] = name;
-	              flag = false;
-	          } else {//åä¹‹ï¼Œç»§ç»­å¾ªç¯è¾“å…¥æˆ¿é—´å·
-	              System.out.println("ä¸å¥½æ„æ€ï¼è¿™é—´æˆ¿é—´æœ‰äººå…¥ä½äº†ï¼Œè¯·é€‰æ‹©åˆ«çš„æˆ¿é—´ï¼");
-	          }
-	      } else {
-	          System.out.println("è¾“å…¥æˆ¿é—´å·ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
-	      }
-	  }
-	  System.out.println("æ¬¢è¿å…¥ä½ï¼");
-	}
-
-	//é€€æˆ¿æ–¹æ³•
-	public static void out(String[][] room) {
-	  System.out.print("è¯·è¾“å…¥è¦é€€æˆ¿çš„æˆ¿é—´å·ï¼Œä¾‹å¦‚203ï¼š");
-	  Scanner sc = new Scanner(System.in);
-	  int num = sc.nextInt();
-
-	  int floor = (num / 100) - 1;
-	  int no = (num % 100) - 1;
-	  if (floor >= 0 && floor <= 2 && no >= 0 && no <= 5) {//åˆ¤æ–­è¾“å…¥çš„æˆ¿é—´å·æ˜¯å¦æ­£ç¡®
-	      if (room[floor][no].equals("Empty")){
-	          System.out.println("æˆ¿é—´ä¸ºç©ºæˆ¿ï¼Œä¸éœ€è¦é€€æˆ¿");}
-	      else {
-	          room[floor][no] = "Empty";
-	          System.out.println("æ­å–œæ‚¨é€€æˆ¿æˆåŠŸï¼Œæ¬¢è¿ä¸‹æ¬¡å†æ¥");
-	      }
-	  }else{
-	      System.out.println("ä½ è¾“å…¥çš„æˆ¿é—´å·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
-	  }
-
-	}
-	}
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
