@@ -2,7 +2,15 @@ package co.jp.chapter07;
 
 public class Animal {//class 类修饰子 Animal类名 class前的access修饰子必为public
 	
-	Animal(boolean alive,int legs,String[]cells){};
+	public boolean alive;
+	public int legs;
+	public String[]cells;
+	public Animal(boolean alive, int legs, String[] cells) {
+		super();
+		this.alive = alive;
+		this.legs = legs;
+		this.cells = cells;
+	}
 
 	
 	

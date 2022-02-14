@@ -186,7 +186,7 @@ public class JavaHomeWork06 {
 //		4. 処理内容︓bubbleSortアルゴリズムを⽤い、⼊⼒した引数の配列をソートしてくださ い。
 //		public static int[]bubbleSort(int []input){
 //			for(int i=0;i<input.length;i++) {
-//				for(int j = 0;j<input.length-1;j++) {
+//				for(int j = 0;j<input.length-1;j++) {//length-1很重要，不然会数组越界，因为j+1会越界
 //					if(input[j]>input[j+1]) {
 //						int h = input[j];
 //						input[j]=input[j+1];

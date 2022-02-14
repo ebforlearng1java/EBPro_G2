@@ -29,6 +29,8 @@ public class JavaChapter04 {
 				{2,4,2,4,5,6,6,6}
 			};
 			System.out.println(b[2][4]);
+			int bb = 493959;
+			System.out.println((float)bb);
 			
 			
 					

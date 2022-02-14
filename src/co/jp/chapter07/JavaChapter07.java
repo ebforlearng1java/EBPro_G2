@@ -28,7 +28,7 @@ public class JavaChapter07 {
 //		else {		System.out.println("hu一致");//用equals比较字符串是正确的方法，因为只比较值 ！！
 //		//.equals前的变量不能为null 会出现null.pointerexception 
 		
-		Animal x1 = new Animal(true,5,{3,4,3,4});//构造函数
+		Animal x1 = new Animal(true,5,new String[4]);//构造函数
 		
 		
 		  
