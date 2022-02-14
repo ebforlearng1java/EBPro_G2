@@ -19,6 +19,8 @@ public class Presentation {
 		System.out.println("hotel: " + Arrays.toString(hotel));
 
 		Scanner sc1 = new Scanner(System.in);
+
+
 		for (;;) {
 			System.out.println("----- ループ開始 -----");
 			String input = sc1.nextLine();
