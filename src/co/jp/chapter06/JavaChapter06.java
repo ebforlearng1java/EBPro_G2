@@ -7,21 +7,21 @@ public class JavaChapter06 {
 		
 		
 
-	int abc=9999;
-	int efg=8888;		  
-//   String d = a+b
-	
-	int abc1=1212;
-	
-	String abc_str="9999";
-	
+//	int abc=9999;
+//	int efg=8888;		  
+////   String d = a+b
+//	
+//	int abc1=1212;
+//	
+//	String abc_str="9999";
+//	
 //  abc = abc_str
 	
-	int c = sum (efg,abc_str);
-	int d = minus (efg,abc_str);
-	
-	System.out.println(c);
-	System.out.println(d);
+//	int c = sum (efg,abc_str);
+//	int d = minus (efg,abc_str);
+//	
+//	System.out.println(c);
+//	System.out.println(d);
 	
 //  Object obj = new Object();
 //	obj=123;
@@ -46,43 +46,43 @@ public class JavaChapter06 {
 ////  System.out.println("Method 7 : "+sum());
 	
 	
-	
-	
-	}	
-	
-	
-	
-  static int sum(int i) {
-	return 0;
-}
-
-  static int sum(String str) {
-	return 0;
-}
-
-//static int sum(Object obj) {
-//	return0;
+//	
+//	
+//		
+//	
+//	
+//	
+//  static int sum(int i) {
+//	return 0;
 //}
-
-  static int sum(int[]array) {
-	return 0;
-}
-
-  static int sum(int efg,String abc_str) {
-	return 0;
-}
-	
-	
-	
-
-	private static int minus(int efg, String abc_str) {
-		// TODO 自動生成されたメソッド・スタブ
-		return 0;
-	}
-
-	private static int sum(int efg, String abc_str) {
-		// TODO 自動生成されたメソッド・スタブ
-		return 0;
-	}
+//
+//  static int sum(String str) {
+//	return 0;
+//}
+//
+////static int sum(Object obj) {
+////	return0;
+////}
+//
+//  static int sum(int[]array) {
+//	return 0;
+//}
+//
+//  static int sum(int efg,String abc_str) {
+//	return 0;
+//}
+//	
+//	
+//	
+//
+//	private static int minus(int efg, String abc_str) {
+//		// TODO 自動生成されたメソッド・スタブ
+//		return 0;
+//	}
+//
+//	private static int sum(int efg, String abc_str) {
+//		// TODO 自動生成されたメソッド・スタブ
+//		return 0;
+//	}
 
 }	
