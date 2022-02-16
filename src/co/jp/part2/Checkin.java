@@ -36,7 +36,6 @@ public class Checkin {
 					Cat cat = new Cat();
 					cat.name = name;
 					cat.age = age;
-			
 				}
 				break;
 			}
@@ -46,7 +45,7 @@ public class Checkin {
 					Dog dog = new Dog();
 					dog.name = name;
 					dog.age = age;
-					
+				}
 				break;
 			}
 			if ("3".equals(input1)) {
@@ -54,17 +53,15 @@ public class Checkin {
 				case "3":
 					Bird bird = new Bird();
 					bird.name = name;
-					bird.age = age;
-					
+					bird.age = age;	
+				}
 				break;
-			}
 			}
 				else {
 				System.out.println("输入格式有误，请重新输入");
-
 			}
 
 		}
 	}
 	}
-}
+

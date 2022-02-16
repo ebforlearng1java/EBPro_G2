@@ -8,17 +8,13 @@ public class Bird extends Pet implements Fly {
 		this.name = name;
 		this.age = age;
 		this.type = type;
-
 	}
-
 	
 	
 	@Override
 	public void fly() {
-		// TODO 自動生成されたメソッド・スタブ
-		
+		// TODO 自動生成されたメソッド・スタブ	
 	}
-
 
 
 	@Override

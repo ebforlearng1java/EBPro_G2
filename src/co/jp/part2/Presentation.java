@@ -3,6 +3,7 @@ package co.jp.part2;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class Presentation {
 
 	public static void main(String[] args) {

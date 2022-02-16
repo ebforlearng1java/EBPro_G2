@@ -1,6 +1,6 @@
 package co.jp.part2;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class Room {
 //
@@ -14,8 +14,6 @@ public class Room {
 //	    		System.out.println("room:"+ i+ Arrays.toString(room));		
 //	    		}
 //	    	}
-//	    
-//	    	
 //	    }
 //		
 //

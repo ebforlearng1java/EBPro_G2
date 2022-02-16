@@ -14,14 +14,12 @@ public class Cat extends Pet implements Run{
 	@Override
 	public void eat() {
 		// TODO 自動生成されたメソッド・スタブ
-
 	}
 
 
 	@Override
 	public void run() {
-		// TODO 自動生成されたメソッド・スタブ
-		
+		// TODO 自動生成されたメソッド・スタブ	
 	}
 
 	

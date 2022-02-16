@@ -11,10 +11,12 @@ public class Pet {
 		this.name = name;
 	}
 	
+	
 	public int getage() {
 		return age;
 	}
 
+	
 	public void eat() {
 		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("喂食成功");
