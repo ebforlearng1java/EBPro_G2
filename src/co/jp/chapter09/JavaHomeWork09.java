@@ -44,7 +44,7 @@ public class JavaHomeWork09 {
 		
 
 
-		//a
+		//
 		
 		
 		//質問３︓Javaには、すべての⽂字コードはUTF-8であり。⽇本語（全⾓⽂字）の場合１⽂
