@@ -1,5 +1,8 @@
 package co.jp.chapter10;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class JavaHomeWork10 {
 
 	// TODO 自動生成されたメソッド・スタブ
@@ -7,7 +10,14 @@ public class JavaHomeWork10 {
 	String input = "みみ, 10, 1\n"
 			+ "レオ, 1, 0\n"
 			+ "マル,2,0";
-
+	public  void Question( ) {
+		List<Pet> pets = new ArrayList<>();
+		for(String row:input.split("\n")){
+			String[] s=row.split(",");
+	
+			Pet pet = new Pet(s[0].trim(), Integer.parseInt(s[1].trim()), Integer.parseInt(s[2].trim()));
+		}
+	}
 	//Q2-1
 
 	public static String getFileType(String path) { 
