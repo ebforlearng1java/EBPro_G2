@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(221, 217, 200);
+    text-align: center;
+}
+
+h1{
+    font-size: 50pt;
+    text-shadow: 6px 6px 6px rgb(49, 124, 211);
+}
+
+h2{
+    font-size: 25pt;
+    text-shadow: 3px 3px 3px rgb(168, 54, 202);
+}
+
+p{
+    font-size: 15pt;
+    text-shadow: 1px 1px 1px rgb(182, 19, 7);
+}
+
+input{
+    size: 30;
+    font-size: 20px;
+}
+
+div{
+    width: 400px;
+    height:400px;
+    border:1px solid;
+    text-align: center;
+    margin:0 auto;
+}
