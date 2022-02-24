@@ -1,0 +1,3 @@
+2022-02-22 10:46:29,566 INFO [example.HelloWorld]:10 - this is info:info
+2022-02-22 10:46:29,566 ERROR [example.HelloWorld]:11 - this is error:error
+2022-02-22 10:46:29,566 DEBUG [example.HelloWorld]:12 - this is debug:debug
