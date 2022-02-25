@@ -1,0 +1,38 @@
+#form-border {
+	background-color: greenyellow;
+	width: 400px;
+}
+ 
+.form-input {
+	width: 200px;
+	height: 25px;
+	padding-left: 5px;
+	border-radius: 5px;
+}
+ 
+.form-label {
+	margin-left: 30px;
+	font-weight:bold;
+}
+ 
+.form-button {
+	width: 70px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 70px;
+	font-size: 18px;
+	font-family: "宋体";
+}
+ 
+
+ 
+
+ 
+#password {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+ 
+#register {
+	margin-left: 70px;
+}
