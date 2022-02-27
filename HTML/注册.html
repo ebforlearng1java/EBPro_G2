@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册信息</title>
+		<style type="text/css">
+		
+			/* 背景图片 */
+			body{
+					height: 100%;
+					width: 100%;
+			       background-color: slategray ;
+			        /* background-size: cover; */
+			    }
+				
+				.zhuce{
+					color: #55ffff;
+					font-size: 50px;
+					text-align: center;					
+				}
+				
+				.information {
+				 font-size: 18px;
+				 font-weight: 500;
+				 color: #ffffff;
+				  text-align: center;				 
+				}
+				
+				.botton {
+					
+				}
+				
+		</style>
+	</head>
+	
+	<body>
+		<h1 class="zhuce">注册信息</h1>
+		<div class="information">
+			
+			
+			<form>
+				
+			<!-- 输入用户信息	 -->
+			
+			姓：<input type="text" maxlength="20" name="firstname"/>
+			<br>
+			名：<input type="text" maxlength="20" name="lastname"/>
+			<br>
+			性别：
+				<input type="radio" name="sex" value="1" />男
+				<input type="radio" name="sex" value="0" />女
+			<br>
+			生日
+				<input type="date" name="birth" value="birth" />
+			<br>
+			对本酒店感兴趣的宠物服务：
+				<input type="checkbox" name="fuwu" value="haircut" />剪毛
+				<input type="checkbox" name="fuwu" value="shampoo" />洗发
+				<input type="checkbox" name="fuwu" value="nailcut" />剪指甲
+				<input type="checkbox" name="fuwu" value="walk" />散步
+				<input type="checkbox" name="fuwu" value="feed" />喂食
+				<input type="checkbox" name="fuwu" value="play" />玩耍
+			<br>
+			如何知道本店的？
+				<select name="knowway">
+					<option value =""></option>
+					<option value ="baozhi">报纸</option>
+					<option value ="tv">电视</option>
+					<option value ="sns">SNS</option>
+					<option value ="train">车站广告</option>				
+				</select>
+			<br>
+			
+			<br>
+			<br>
+			备注
+				<textarea rows="5" cols="30" name="beizhu"></textarea>
+			<br>	  
+			*可选&nbsp;您的宠物照片
+				<input type="file" >
+			<!-- 提交表单 -->
+			<br>
+			<br>
+			<br>
+			
+			<div class="botton">							
+				<input type="submit" value="注册" />				
+				<input type="reset" value="重置" />
+			</div>
+			
+			</form>	
+		</div>	
+	</body>
+</html>
