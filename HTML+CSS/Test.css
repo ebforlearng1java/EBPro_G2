@@ -1,0 +1,37 @@
+
+body
+{
+	background-color:grey;
+}
+
+p {
+ font-size:10pt;
+ color:#FF00aa;
+}
+
+h1 {color: pink; }
+
+
+
+}
+
+txt {
+	height: 200px;
+	line-height: 200px;
+}
+
+div{
+
+   width:300px; 
+
+   height:200px; 
+
+   position:absolute; 
+
+   left:50%; 
+
+   top:50%; 
+
+   margin:-100px 0 0 -150px
+
+}
